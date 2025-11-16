@@ -1,0 +1,363 @@
+/* Golden Days Calculator Specific Styles */
+.calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-card {
+    background: white;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(229, 152, 155, 0.1);
+    transition: all 300ms ease-in-out;
+}
+
+.calculator-title {
+    text-align: center;
+    color: #403D39;
+    margin-bottom: 32px;
+}
+
+.calculator-form {
+    margin-bottom: 32px;
+}
+
+.calculate-button {
+    background: #E5989B;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    width: 100%;
+    height: 52px;
+    margin-top: 16px;
+}
+
+.calculate-button:hover {
+    background: #D9797D;
+    transform: translateY(-2px);
+}
+
+.calculate-button:active {
+    transform: scale(0.98);
+}
+
+/* Results Container */
+.results-container {
+    background: #FFF5F5;
+    padding: 32px;
+    border-radius: 16px;
+    margin-top: 32px;
+    animation: slideInUp 500ms ease-in-out;
+}
+
+.results-title {
+    color: #E5989B;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fertile-day {
+    background: white;
+    padding: 20px 16px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(229, 152, 155, 0.15);
+    transition: transform 250ms ease;
+}
+
+.fertile-day:hover {
+    transform: translateY(-2px);
+}
+
+.fertile-day .day-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #E5989B;
+    margin-bottom: 8px;
+}
+
+.fertile-day .day-date {
+    font-size: 14px;
+    color: #8D8D8D;
+    margin-bottom: 4px;
+}
+
+.fertile-day .day-name {
+    font-size: 12px;
+    color: #A2D2FF;
+    font-weight: 500;
+}
+
+.fertile-day .day-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.results-tips {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #E5989B;
+}
+
+.results-tips h5 {
+    color: #E5989B;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.results-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results-tips li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #403D39;
+    line-height: 1.6;
+    position: relative;
+    padding-right: 20px;
+}
+
+.results-tips li::before {
+    content: "💡";
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading State */
+.calculating {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.calculating .calculate-button {
+    background: #8D8D8D;
+    cursor: not-allowed;
+}
+
+.calculating .calculate-button::after {
+    content: " جاري الحساب...";
+}
+
+/* Error States */
+.error-message {
+    background: #FFF5F5;
+    color: #E63946;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #E63946;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+/* Input Validation */
+.input-group input:invalid {
+    border-color: #E63946;
+}
+
+.input-group input:valid {
+    border-color: #52B788;
+}
+
+/* Calendar Icon */
+.calendar-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #E5989B;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.calendar-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D9797D;
+    border-radius: 4px 4px 0 0;
+}
+
+.calendar-icon::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    right: 2px;
+    height: 10px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Responsive Design for Calculator */
+@media (max-width: 767px) {
+    .calculator-card {
+        padding: 32px 24px;
+    }
+    
+    .results-container {
+        padding: 24px;
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .fertile-day {
+        padding: 16px 12px;
+    }
+    
+    .fertile-day .day-number {
+        font-size: 20px;
+    }
+    
+    .fertile-day .day-icon {
+        font-size: 20px;
+    }
+    
+    .results-tips {
+        padding: 20px 16px;
+    }
+    
+    .results-tips ul li {
+        font-size: 13px;
+        padding: 6px 0;
+        padding-right: 18px;
+    }
+    
+    .results-tips ul li::before {
+        top: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 24px 16px;
+    }
+    
+    .results-container {
+        padding: 20px 16px;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .fertile-day {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: right;
+        padding: 16px;
+    }
+    
+    .fertile-day .day-info {
+        flex: 1;
+    }
+    
+    .fertile-day .day-number {
+        margin-bottom: 4px;
+        font-size: 18px;
+    }
+    
+    .fertile-day .day-date {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    
+    .fertile-day .day-name {
+        font-size: 11px;
+    }
+    
+    .fertile-day .day-icon {
+        font-size: 24px;
+        margin: 0 0 0 16px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .calculator-form {
+        display: none;
+    }
+    
+    .results-container {
+        background: white;
+        border: 1px solid #E5989B;
+        box-shadow: none;
+    }
+    
+    .calculate-button {
+        display: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .calculator-card {
+        border: 2px solid #403D39;
+    }
+    
+    .fertile-day {
+        border: 2px solid #E5989B;
+    }
+    
+    .results-tips {
+        border: 2px solid #E5989B;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .results-container {
+        animation: none;
+    }
+    
+    .fertile-day:hover {
+        transform: none;
+    }
+    
+    .calculate-button:hover {
+        transform: none;
+    }
+    
+    .heart-icon,
+    .baby-icon,
+    .support-icon {
+        animation: none;
+    }
+}
