@@ -1,0 +1,226 @@
+{
+    "siteInfo": {
+        "name": "الأمل",
+        "tagline": "رحلة الأمومة مع الأمل",
+        "description": "رفيقك في رحلة الأمومة، نقدم لك الدعم والإرشاد والتشجيع في كل خطوة نحو حلم الأمومة",
+        "language": "ar",
+        "direction": "rtl",
+        "author": "MiniMax Agent",
+        "version": "2.0",
+        "lastUpdated": "2025-11-16"
+    },
+    "heroSection": {
+        "title": "الأمل",
+        "subtitle": "رحلة الأمومة مع الأمل",
+        "description": "مع الأمل، كل خطوة نحو الأمومة تصبح أسهل وأوضح. نحن هنا لنكون دليلكم في هذه الرحلة الجميلة.",
+        "ctaText": "ابدأ رحلتك معنا",
+        "backgroundImage": "imgs/happy_family_1.jpg",
+        "logoImage": "imgs/ivf_clinic_icon_5.jpg"
+    },
+    "statistics": {
+        "successRate": {
+            "value": 85,
+            "label": "معدل النجاح",
+            "suffix": "%"
+        },
+        "consultations": {
+            "value": 1000,
+            "label": "استشارة",
+            "prefix": "+"
+        },
+        "families": {
+            "value": 2500,
+            "label": "عائلة سعادة",
+            "prefix": "+"
+        },
+        "experience": {
+            "value": 15,
+            "label": "سنة خبرة",
+            "suffix": "+"
+        }
+    },
+    "features": [
+        {
+            "icon": "imgs/consultation_icon_4.jpg",
+            "title": "استشارات شخصية",
+            "description": "استشارات فردية مع المختصين للإجابة على جميع استفساراتك"
+        },
+        {
+            "icon": "imgs/calendar_icon_7.jpg",
+            "title": "تتبع التقدم",
+            "description": "نظام متطور لتتبع مراحل العلاج والتقدم نحو الهدف"
+        },
+        {
+            "icon": "imgs/heart_icon_9.jpg",
+            "title": "دعم نفسي",
+            "description": "دعم نفسي متخصص لمساعدتك في هذه الرحلة الحساسة"
+        },
+        {
+            "icon": "imgs/calculator_icon_6.jpg",
+            "title": "حاسبة النجاح",
+            "description": "أداة ذكية لحساب فرص النجاح الشخصية بناءً على حالتك"
+        }
+    ],
+    "articles": [
+        {
+            "id": 1,
+            "title": "ما هو الحقن المجهري؟",
+            "excerpt": "دليل شامل لفهم تقنية الحقن المجهري والخطوات المتبعة",
+            "image": "imgs/ivf_clinic_icon_9.jpg",
+            "date": "2025-11-15",
+            "category": "معلومات طبية",
+            "readTime": "5 دقائق",
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": "التحضير للحقن المجهري",
+            "excerpt": "خطوات مهمة للتحضير الجسدي والنفسي قبل بدء العلاج",
+            "image": "imgs/checklist_icon_6.jpg",
+            "date": "2025-11-14",
+            "category": "إعداد",
+            "readTime": "7 دقائق",
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": "الرعاية بعد العملية",
+            "excerpt": "نصائح وإرشادات هامة للرعاية والنشاطات بعد الحقن المجهري",
+            "image": "imgs/doctor_consultation_4.jpg",
+            "date": "2025-11-13",
+            "category": "رعاية",
+            "readTime": "6 دقائق",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "العوامل المؤثرة في النجاح",
+            "excerpt": "العوامل التي تؤثر على نجاح الحقن المجهري وكيفية تحسينها",
+            "image": "imgs/journey_timeline_6.jpg",
+            "date": "2025-11-12",
+            "category": "عوامل النجاح",
+            "readTime": "8 دقائق",
+            "featured": false
+        },
+        {
+            "id": 5,
+            "title": "الاختبارات المطلوبة",
+            "excerpt": "قائمة شاملة بالاختبارات والفحوصات اللازمة قبل البدء",
+            "image": "imgs/lab_testing_5.jpg",
+            "date": "2025-11-11",
+            "category": "فحوصات",
+            "readTime": "4 دقائق",
+            "featured": false
+        },
+        {
+            "id": 6,
+            "title": "أدلة ونصائح يومية",
+            "excerpt": "نصائح يومية مهمة للمساعدة في رحلة الأمومة",
+            "image": "imgs/happy_family_5.jpg",
+            "date": "2025-11-10",
+            "category": "نصائح",
+            "readTime": "6 دقائق",
+            "featured": false
+        }
+    ],
+    "testimonials": [
+        {
+            "id": 1,
+            "name": "فاطمة أحمد",
+            "text": "شكراً لفريق الأمل على الدعم والرعاية المتطورة. بفضلهم حققنا حلم الأمومة.",
+            "rating": 5,
+            "image": "imgs/happy_family_1.jpg",
+            "location": "الرياض",
+            "date": "2025-11-10"
+        },
+        {
+            "id": 2,
+            "name": "سارة محمد",
+            "text": "الخدمة ممتازة والفريق محترف جداً. أشعر بالأمان والثقة طوال الرحلة.",
+            "rating": 5,
+            "image": "imgs/happy_family_5.jpg",
+            "location": "جدة",
+            "date": "2025-11-08"
+        },
+        {
+            "id": 3,
+            "name": "نورا العلي",
+            "text": "الإرشاد والدعم كانا عاملين أساسيين في نجاح رحلتنا. أنصح الجميع بالأمل.",
+            "rating": 5,
+            "image": "imgs/happy_family_6.jpg",
+            "location": "الدمام",
+            "date": "2025-11-05"
+        }
+    ],
+    "faq": [
+        {
+            "question": "ما هي نسب نجاح الحقن المجهري؟",
+            "answer": "تختلف نسب النجاح حسب العمر وحالة الأزواج، ولكن معدل النجاح العام يتراوح بين 40-60% للحالات المناسبة.",
+            "image": "imgs/ivf_clinic_icon_0.jpg"
+        },
+        {
+            "question": "كم تستغرق عملية الحقن المجهري؟",
+            "answer": "عملية الحقن المجهري تستغرق حوالي 15-30 دقيقة تحت تأثير المخدر، وتستغرق الرحلة الكاملة من التحضير إلى النتيجة 2-3 أسابيع.",
+            "image": "imgs/journey_timeline_1.jpg"
+        },
+        {
+            "question": "هل يحتاج الحقن المجهري لراحة تامة؟",
+            "answer": "ينصح بالراحة لمدة 24-48 ساعة بعد العملية، ولكن يمكن للأنشطة الخفيفة أن تساعد في التحسن.",
+            "image": "imgs/doctor_consultation_1.jpg"
+        },
+        {
+            "question": "ما هي الآثار الجانبية المحتملة؟",
+            "answer": "قد تشمل الآثار الجانبية انتفاخ خفيف، ألم في البطن، تغيرات مزاجية، ولكن هذه الأعراض مؤقتة.",
+            "image": "imgs/heart_icon_1.jpg"
+        },
+        {
+            "question": "متى يمكن معرفة النتيجة؟",
+            "answer": "يمكن معرفة النتيجة من خلال اختبار الحمل بعد 10-14 يوم من نقل الجنين إلى الرحم.",
+            "image": "imgs/calendar_icon_2.jpg"
+        },
+        {
+            "question": "هل يمكن تحسين فرص النجاح؟",
+            "answer": "نعم، من خلال الحفاظ على نمط حياة صحي، تقليل التوتر، اتباع الإرشادات الطبية، وأخذ الأدوية الموصوفة.",
+            "image": "imgs/checklist_icon_4.jpg"
+        }
+    ],
+    "contact": {
+        "phone": "+966 11 123 4567",
+        "email": "info@almal-ivf.com",
+        "address": "شارع الملك فهد، الرياض، المملكة العربية السعودية",
+        "workingHours": "السبت - الخميس: 8:00 ص - 8:00 م",
+        "emergencyPhone": "+966 11 123 4568"
+    },
+    "socialMedia": {
+        "twitter": "https://twitter.com/almal_ivf",
+        "instagram": "https://instagram.com/almal_ivf",
+        "facebook": "https://facebook.com/almal_ivf",
+        "youtube": "https://youtube.com/@almal-ivf",
+        "linkedin": "https://linkedin.com/company/almal-ivf"
+    },
+    "settings": {
+        "primaryColor": "#667eea",
+        "secondaryColor": "#764ba2",
+        "accentColor": "#f093fb",
+        "fontFamily": "Arial, sans-serif",
+        "enableDarkMode": false,
+        "enableAnimations": true,
+        "enableChat": false,
+        "maintenanceMode": false
+    },
+    "seo": {
+        "keywords": ["الحقن المجهري", "IVF", "علاج العقم", "الأمل", "الرعاية الطبية"],
+        "author": "MiniMax Agent",
+        "robots": "index, follow",
+        "sitemap": true,
+        "googleAnalytics": "",
+        "googleSearchConsole": ""
+    },
+    "performance": {
+        "lazyLoading": true,
+        "imageOptimization": true,
+        "minifyCSS": true,
+        "minifyJS": true,
+        "cacheEnabled": true
+    }
+}
