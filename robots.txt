@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# حماية لوحة التحكم
+Disallow: /admin-dashboard.html
+
+# ملفات النظام
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /_next/
+Disallow: /build/
+
+# الصفحات المؤقتة
+Disallow: /tmp/
+Disallow: /backup/
+
+# مولد sitemap
+Sitemap: https://almal-ivf-guide.github.io/almal-ivf-guide/sitemap.xml
+
+# معدل الزحف
+Crawl-delay: 1
+
+# معلومات الاتصال
+# الموقع: موقع الأمل للأرشدة الطبية
+# التاريخ: 2025-11-16
