@@ -1,655 +1,2431 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل الأمل للعلاج - IVF Guide</title>
-    <meta name="description" content="دليل شامل للعلاج داخل المستقبل - آلة حاسبة للعلاج وأدوات مساعدة للمقبلين على العلاج">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Tajawal', 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #4f46e5;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #374151;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #4f46e5;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
-            transition: all 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
-        }
-
-        /* Features */
-        .features {
-            background: white;
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1f2937;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            border: 1px solid #f3f4f6;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .feature-card:nth-child(1) .feature-icon {
-            background: linear-gradient(135deg, #ec4899, #be185d);
-        }
-
-        .feature-card:nth-child(2) .feature-icon {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-        }
-
-        .feature-card:nth-child(3) .feature-icon {
-            background: linear-gradient(135deg, #10b981, #059669);
-        }
-
-        .feature-card:nth-child(4) .feature-icon {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .feature-card p {
-            color: #6b7280;
-            line-height: 1.6;
-        }
-
-        /* Statistics */
-        .stats {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            padding: 4rem 0;
-            color: white;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .stat-item {
-            padding: 2rem;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Calculator Section */
-        .calculator-section {
-            background: #f9fafb;
-            padding: 4rem 0;
-        }
-
-        .calculator-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .calculator-title {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .calculator-description {
-            color: #6b7280;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: right;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #374151;
-        }
-
-        .form-group select, .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: white;
-            transition: border-color 0.3s;
-        }
-
-        .form-group select:focus, .form-group input:focus {
-            outline: none;
-            border-color: #4f46e5;
-        }
-
-        .calculate-btn {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-
-        .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
-        }
-
-        .result {
-            margin-top: 2rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border-radius: 15px;
-            border: 2px solid #0ea5e9;
-            display: none;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #f9fafb;
-        }
-
-        .footer-section p, .footer-section a {
-            color: #d1d5db;
-            text-decoration: none;
-            line-height: 1.8;
-        }
-
-        .footer-section a:hover {
-            color: #60a5fa;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
-            color: #9ca3af;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .features-grid, .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .calculator-card {
-                padding: 2rem 1.5rem;
-                margin: 0 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل الأمل للعلاج - IVF Guide</title>
+<meta name="description" content="دليل شامل للعلاج داخل المستقبل - آلة حاسبة للعلاج وأدوات مساعدة للمقبلين على العلاج">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Tajawal', 'Arial', sans-serif;
+line-height: 1.6;
+color: #333;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+min-height: 100vh;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+/* Header */
+header {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+padding: 1rem 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.header-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+font-size: 1.8rem;
+font-weight: bold;
+color: #4f46e5;
+}
+.logo-icon {
+width: 40px;
+height: 40px;
+background: linear-gradient(135deg, #4f46e5, #7c3aed);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 1.2rem;
+}
+.nav-menu {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+.nav-menu a {
+text-decoration: none;
+color: #374151;
+font-weight: 500;
+transition: color 0.3s;
+padding: 8px 16px;
+border-radius: 8px;
+}
+.nav-menu a:hover {
+color: #4f46e5;
+background: rgba(79, 70, 229, 0.1);
+}
+/* Hero Section */
+.hero {
+text-align: center;
+padding: 4rem 0;
+color: white;
+}
+.hero h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.hero p {
+font-size: 1.3rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+}
+.cta-button {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: linear-gradient(135deg, #10b981, #059669);
+color: white;
+padding: 15px 30px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: 600;
+font-size: 1.1rem;
+box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+transition: all 0.3s;
+}
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+}
+/* Features */
+.features {
+background: white;
+padding: 4rem 0;
+}
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+color: #1f2937;
+}
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+.feature-card {
+background: white;
+border-radius: 20px;
+padding: 2rem;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+transition: all 0.3s;
+border: 1px solid #f3f4f6;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.feature-icon {
+width: 60px;
+height: 60px;
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1.5rem;
+font-size: 1.5rem;
+color: white;
+}
+.feature-card:nth-child(1) .feature-icon {
+background: linear-gradient(135deg, #ec4899, #be185d);
+}
+.feature-card:nth-child(2) .feature-icon {
+background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+.feature-card:nth-child(3) .feature-icon {
+background: linear-gradient(135deg, #10b981, #059669);
+}
+.feature-card:nth-child(4) .feature-icon {
+background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+.feature-card:nth-child(5) .feature-icon {
+background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.feature-card:nth-child(6) .feature-icon {
+background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+.feature-card h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #1f2937;
+}
+.feature-card p {
+color: #6b7280;
+line-height: 1.6;
+margin-bottom: 1.5rem;
+}
+.feature-link {
+display: inline-block;
+background: linear-gradient(135deg, #4f46e5, #7c3aed);
+color: white;
+padding: 10px 20px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 500;
+transition: all 0.3s;
+}
+.feature-link:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+/* Statistics */
+.stats {
+background: linear-gradient(135deg, #4f46e5, #7c3aed);
+padding: 4rem 0;
+color: white;
+text-align: center;
+}
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+}
+.stat-item {
+padding: 2rem;
+border-radius: 20px;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+}
+.stat-icon {
+width: 60px;
+height: 60px;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1rem;
+font-size: 1.5rem;
+color: white;
+}
+.stat-number {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
+.stat-label {
+font-size: 1.1rem;
+opacity: 0.9;
+}
+/* Calculator Sections */
+.calculators-section {
+background: #f9fafb;
+padding: 4rem 0;
+}
+.calc-card {
+background: white;
+border-radius: 20px;
+padding: 3rem;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+margin-bottom: 3rem;
+}
+.calc-title {
+font-size: 2.2rem;
+margin-bottom: 1rem;
+color: #1f2937;
+text-align: center;
+}
+.calc-description {
+color: #6b7280;
+margin-bottom: 2rem;
+font-size: 1.1rem;
+text-align: center;
+}
+.form-group {
+margin-bottom: 1.5rem;
+text-align: right;
+}
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: #374151;
+}
+.form-group select, .form-group input {
+width: 100%;
+padding: 12px 15px;
+border: 2px solid #e5e7eb;
+border-radius: 10px;
+font-size: 1rem;
+background: white;
+transition: border-color 0.3s;
+}
+.form-group select:focus, .form-group input:focus {
+outline: none;
+border-color: #4f46e5;
+}
+.calculate-btn {
+background: linear-gradient(135deg, #4f46e5, #7c3aed);
+color: white;
+padding: 15px 40px;
+border: none;
+border-radius: 50px;
+font-size: 1.1rem;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+margin-top: 1rem;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.calculate-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+}
+.result {
+margin-top: 2rem;
+padding: 2rem;
+background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+border-radius: 15px;
+border: 2px solid #0ea5e9;
+display: none;
+}
+/* Articles Section */
+.articles-section {
+background: white;
+padding: 4rem 0;
+}
+.articles-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 2rem;
+}
+.article-card {
+background: white;
+border-radius: 15px;
+padding: 2rem;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+border: 1px solid #f3f4f6;
+transition: all 0.3s;
+}
+.article-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+.article-icon {
+width: 50px;
+height: 50px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 1rem;
+font-size: 1.3rem;
+color: white;
+}
+.article-card:nth-child(1) .article-icon {
+background: linear-gradient(135deg, #10b981, #059669);
+}
+.article-card:nth-child(2) .article-icon {
+background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+.article-card:nth-child(3) .article-icon {
+background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+.article-card h4 {
+font-size: 1.3rem;
+margin-bottom: 1rem;
+color: #1f2937;
+}
+.article-card p {
+color: #6b7280;
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+.read-more {
+color: #4f46e5;
+text-decoration: none;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 5px;
+}
+.read-more:hover {
+color: #7c3aed;
+}
+/* Support Section */
+.support-section {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+padding: 4rem 0;
+color: white;
+}
+.support-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+.support-card {
+background: rgba(255, 255, 255, 0.1);
+border-radius: 20px;
+padding: 2rem;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+text-align: center;
+}
+.support-icon {
+width: 60px;
+height: 60px;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1.5rem;
+font-size: 1.5rem;
+}
+.support-card h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.support-card p {
+opacity: 0.9;
+line-height: 1.6;
+}
+/* Footer */
+footer {
+background: #1f2937;
+color: white;
+padding: 3rem 0;
+text-align: center;
+}
+.footer-content {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-bottom: 2rem;
+}
+.footer-section h3 {
+margin-bottom: 1rem;
+color: #f9fafb;
+}
+.footer-section p, .footer-section a {
+color: #d1d5db;
+text-decoration: none;
+line-height: 1.8;
+}
+.footer-section a:hover {
+color: #60a5fa;
+}
+.footer-bottom {
+border-top: 1px solid #374151;
+padding-top: 2rem;
+color: #9ca3af;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.nav-menu {
+display: none;
+}
+.hero h1 {
+font-size: 2.5rem;
+}
+.hero p {
+font-size: 1.1rem;
+}
+.header-content {
+flex-direction: column;
+gap: 1rem;
+}
+.features-grid, .stats-grid, .articles-grid, .support-grid {
+grid-template-columns: 1fr;
+}
+.calc-card {
+padding: 2rem 1.5rem;
+margin: 0 1rem;
+}
+}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">✓</div>
-                    <span>دليل الأمل</span>
-                </div>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#calculator">حاسبة النجاح</a></li>
-                        <li><a href="#guide">دليل العلاج</a></li>
-                        <li><a href="#support">الدعم</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>مرحباً بك في دليل الأمل</h1>
-            <p>دليلك الشامل للعلاج داخل المستقبل - سنكون معك في كل خطوة</p>
-            <a href="#calculator" class="cta-button">
-                ✓ ابدأ الآن
-            </a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">خدماتنا المميزة</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>استشارات شخصية</h3>
-                    <p>استشارات مخصصة تناسب حالتك وظروفك الفردية مع فريق متخصص في العلاج</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>متابعة التقدم</h3>
-                    <p>أدوات متطورة لمتابعة كل مرحلة من مراحل العلاج وتقييم النتائج</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">❤️</div>
-                    <h3>الدعم النفسي</h3>
-                    <p>دعم نفسي وعاطفي شامل للتعامل مع تحديات العلاج والضغط النفسي</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🧮</div>
-                    <h3>حاسبة النجاح</h3>
-                    <p>حاسبة متقدمة لتقدير فرص النجاح بناءً على عوامل متعددة وشخصية</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="stats">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">أرقام مذهلة</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-icon">✓</div>
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">نسبة النجاح</div>
-                </div>
-                
-                <div class="stat-item">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-number">5000+</div>
-                    <div class="stat-label">عائلة محققة للحلم</div>
-                </div>
-                
-                <div class="stat-item">
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">سنة خبرة طبية</div>
-                </div>
-                
-                <div class="stat-item">
-                    <div class="stat-icon">✓</div>
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">دعم متواصل</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section class="calculator-section" id="calculator">
-        <div class="container">
-            <div class="calculator-card">
-                <h2 class="calculator-title">حاسبة الأيام الذهبية</h2>
-                <p class="calculator-description">احسبي أفضل أوقات العلاج المحتملة بناءً على دورتك الشهرية</p>
-                
-                <form id="goldenDaysForm">
-                    <div class="form-group">
-                        <label for="cycleLength">طول الدورة الشهرية (بالأيام)</label>
-                        <select id="cycleLength" required>
-                            <option value="">اختاري طول دورتك</option>
-                            <option value="21">21 يوم</option>
-                            <option value="22">22 يوم</option>
-                            <option value="23">23 يوم</option>
-                            <option value="24">24 يوم</option>
-                            <option value="25">25 يوم</option>
-                            <option value="26">26 يوم</option>
-                            <option value="27">27 يوم</option>
-                            <option value="28" selected>28 يوم</option>
-                            <option value="29">29 يوم</option>
-                            <option value="30">30 يوم</option>
-                            <option value="31">31 يوم</option>
-                            <option value="32">32 يوم</option>
-                            <option value="33">33 يوم</option>
-                            <option value="34">34 يوم</option>
-                            <option value="35">35 يوم</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="lastPeriod">أول يوم من آخر دورة شهرية</label>
-                        <input type="date" id="lastPeriod" required>
-                    </div>
-                    
-                    <button type="submit" class="calculate-btn">
-                        🧮 احسبي أفضل الأوقات
-                    </button>
-                </form>
-                
-                <div class="result" id="result">
-                    <h3>أفضل أوقات العلاج:</h3>
-                    <div id="resultContent"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>دليل الأمل</h3>
-                    <p>دليلك الشامل للعلاج داخل المستقبل. نحن هنا لنكون جزءاً من رحلة الأمل وتحقيق الحلم.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <p><a href="#home">الرئيسية</a></p>
-                    <p><a href="#calculator">حاسبة النجاح</a></p>
-                    <p><a href="#guide">دليل العلاج</a></p>
-                    <p><a href="#support">الدعم</a></p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>معلومات الاتصال</h3>
-                    <p>Email: info@almal-ivf-guide.com</p>
-                    <p>هاتف: 123-456-7890</p>
-                    <p>متاحون على مدار الساعة لدعمك</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>تابعينا</h3>
-                    <p>حسابات التواصل الاجتماعي قريباً</p>
-                    <p>ابقوا على اطلاع على آخر التحديثات والنصائح</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 دليل الأمل للعلاج. جميع الحقوق محفوظة. | صُنع بـ ❤️ لأجل الأمهات</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Golden Days Calculator
-        document.getElementById('goldenDaysForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const cycleLength = parseInt(document.getElementById('cycleLength').value);
-            const lastPeriod = new Date(document.getElementById('lastPeriod').value);
-            
-            if (!cycleLength || !lastPeriod) {
-                alert('يرجى ملء جميع الحقول');
-                return;
-            }
-            
-            // Calculate ovulation day (14 days before next period)
-            const nextPeriod = new Date(lastPeriod);
-            nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
-            
-            const ovulationDay = new Date(nextPeriod);
-            ovulationDay.setDate(ovulationDay.getDate() - 14);
-            
-            // Calculate fertile window (5 days before ovulation to ovulation day)
-            const fertileStart = new Date(ovulationDay);
-            fertileStart.setDate(fertileStart.getDate() - 4);
-            
-            const fertileEnd = new Date(ovulationDay);
-            fertileEnd.setDate(fertileEnd.getDate() + 1);
-            
-            // Calculate golden days (2-3 days before ovulation)
-            const goldenStart = new Date(ovulationDay);
-            goldenStart.setDate(goldenStart.getDate() - 2);
-            
-            const goldenEnd = new Date(ovulationDay);
-            
-            // Format dates
-            const formatDate = (date) => {
-                return date.toLocaleDateString('ar-EG', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-            };
-            
-            // Display results
-            const resultDiv = document.getElementById('result');
-            const resultContent = document.getElementById('resultContent');
-            
-            resultContent.innerHTML = `
-                <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
-                    <h4 style="margin-bottom: 15px; font-size: 1.3rem;">🎯 الأيام الذهبية (أفضل أوقات العلاج):</h4>
-                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>من:</strong> ${formatDate(goldenStart)}</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>إلى:</strong> ${formatDate(goldenEnd)}</p>
-                    
-                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
-                        <h5 style="margin-bottom: 10px;">🗓️ الفترة الكاملة الخصبة:</h5>
-                        <p><strong>من:</strong> ${formatDate(fertileStart)}</p>
-                        <p><strong>إلى:</strong> ${formatDate(fertileEnd)}</p>
-                    </div>
-                    
-                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
-                        <p style="font-size: 0.95rem; margin: 0;">💡 نصيحة: هذه الحسابات تقديرية، استشيري طبيبك للحصول على توقيت دقيق للعلاج</p>
-                    </div>
-                </div>
-            `;
-            
-            resultDiv.style.display = 'block';
-            resultDiv.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+<!-- Header -->
+<header>
+<div class="container">
+<div class="header-content">
+<div class="logo">
+<div class="logo-icon">❤️</div>
+<span>دليل الأمل</span>
+</div>
+<nav>
+<ul class="nav-menu">
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#calculators">الحاسبات</a></li>
+<li><a href="#articles">المقالات</a></li>
+<li><a href="#support">الدعم النفسي</a></li>
+<li><a href="#consultations">الاستشارات</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container">
+<h1>مرحباً بك في دليل الأمل</h1>
+<p>دليلك الشامل للعلاج داخل المستقبل - سنكون معك في كل خطوة نحو تحقيق الحلم</p>
+<a href="#calculators" class="cta-button">
+💕 ابدأ رحلة الأمل
+</a>
+</div>
+</section>
+<!-- Features Section -->
+<section class="features">
+<div class="container">
+<h2 class="section-title">خدماتنا الشاملة</h2>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">💬</div>
+<h3>استشارات شخصية</h3>
+<p>استشارات مخصصة تناسب حالتك وظروفك الفردية مع فريق طبي متخصص</p>
+<a href="#consultations" class="feature-link">احجز استشارة</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📊</div>
+<h3>متابعة التقدم</h3>
+<p>أدوات متطورة لمتابعة كل مرحلة من مراحل العلاج وتقييم النتائج بدقة</p>
+<a href="#calculators" class="feature-link">ابدأ المتابعة</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">❤️</div>
+<h3>مقالات الدعم النفسي</h3>
+<p>مقالات شاملة حول التأقلم النفسي وإدارة التوتر أثناء رحلة العلاج</p>
+<a href="#support" class="feature-link">اقرأ المقالات</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🧮</div>
+<h3>حاسبة نسبة النجاح</h3>
+<p>حاسبة متقدمة لتقدير فرص النجاح بناءً على عوامل متعددة وشخصية</p>
+<a href="#success-calculator" class="feature-link">احسبي فرصك</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📚</div>
+<h3>مقالات طبية</h3>
+<p>محتوى طبي متخصص ونصائح علمية من أطباء experts في مجال الخصوبة</p>
+<a href="#articles" class="feature-link">اقرأ المقالات</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">⏰</div>
+<h3>حاسبة الأيام الذهبية</h3>
+<p>احسبي أفضل أوقات العلاج المحتملة بناءً على دورتك الشهرية بدقة</p>
+<a href="#golden-calculator" class="feature-link">احسبي الأوقات</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Section -->
+<section class="stats">
+<div class="container">
+<h2 class="section-title" style="color: white;">إنجازاتنا المذهلة</h2>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-icon">✅</div>
+<div class="stat-number">95%</div>
+<div class="stat-label">نسبة النجاح الإجمالية</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon">👨‍👩‍👧‍👦</div>
+<div class="stat-number">5000+</div>
+<div class="stat-label">عائلة حققت حلمها</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon">⭐</div>
+<div class="stat-number">15+</div>
+<div class="stat-label">سنة خبرة طبية متميزة</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon">💪</div>
+<div class="stat-number">24/7</div>
+<div class="stat-label">دعم متواصل على مدار الساعة</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculators Section -->
+<section class="calculators-section" id="calculators">
+<div class="container">
+<!-- Success Rate Calculator -->
+<div class="calc-card" id="success-calculator">
+<h2 class="calc-title">حاسبة نسبة نجاح الحقن المجهري</h2>
+<p class="calc-description">احسبي احتمالية نجاح العلاج بناءً على عواملك الشخصية</p>
+<form id="successRateForm">
+<div class="form-group">
+<label for="age">العمر</label>
+<select id="age" required>
+<option value="">اختاري عمرك</option>
+<option value="under25">أقل من 25 سنة</option>
+<option value="25_30">25-30 سنة</option>
+<option value="30_35">30-35 سنة</option>
+<option value="35_40">35-40 سنة</option>
+<option value="over40">أكثر من 40 سنة</option>
+</select>
+</div>
+<div class="form-group">
+<label for="attempts">عدد المحاولات السابقة</label>
+<select id="attempts" required>
+<option value="">اختاري عدد المحاولات</option>
+<option value="0">أول محاولة</option>
+<option value="1">محاولة واحدة</option>
+<option value="2">محاولتان</option>
+<option value="3">3 محاولات أو أكثر</option>
+</select>
+</div>
+<div class="form-group">
+<label for="cause">سبب الحاجة للعلاج</label>
+<select id="cause" required>
+<option value="">اختاري السبب</option>
+<option value="male">مشكلة في الرجل</option>
+<option value="female">مشكلة في المرأة</option>
+<option value="both">مشكلة في الطرفين</option>
+<option value="unknown">غير محدد</option>
+</select>
+</div>
+<div class="form-group">
+<label for="bmi">مؤشر كتلة الجسم (BMI)</label>
+<select id="bmi" required>
+<option value="">اختاري مؤشر كتلة جسمك</option>
+<option value="underweight">أقل من الطبيعي (< 18.5)</option>
+<option value="normal">طبيعي (18.5-24.9)</option>
+<option value="overweight">زيادة بسيطة (25-29.9)</option>
+<option value="obese">زيادة كبيرة (30+)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="smoking">تاريخ التدخين</label>
+<select id="smoking" required>
+<option value="">اختاري تاريخ التدخين</option>
+<option value="never">لم أدخن أبداً</option>
+<option value="former">مدخنة سابقة (توقفت عن التدخين)</option>
+<option value="current">مدخنة حالياً</option>
+</select>
+</div>
+<div class="form-group">
+<label for="eggQuality">جودة البويضات (إن وجدت)</label>
+<select id="eggQuality">
+<option value="unknown">غير معروف</option>
+<option value="excellent">ممتازة</option>
+<option value="good">جيدة</option>
+<option value="fair">متوسطة</option>
+<option value="poor">ضعيفة</option>
+</select>
+</div>
+<div class="form-group">
+<label for="miscarriages">تاريخ الإجهاضات السابقة</label>
+<select id="miscarriages" required>
+<option value="">اختاري عدد الإجهاضات السابقة</option>
+<option value="none">لا توجد إجهاضات سابقة</option>
+<option value="one">إجهاض واحد</option>
+<option value="two">إجهاضان</option>
+<option value="three">3 إجهاضات أو أكثر</option>
+</select>
+</div>
+<div class="form-group">
+<label for="lifestyle">نمط الحياة العام</label>
+<select id="lifestyle" required>
+<option value="">اختاري نمط حياتك</option>
+<option value="excellent">ممتاز - رياضة منتظمة ونظام غذائي صحي</option>
+<option value="good">جيد - أنشطة خفيفة ونظام غذائي مقبول</option>
+<option value="moderate">متوسط - نشاط قليل</option>
+<option value="poor">ضعيف - قليل من النشاط</option>
+</select>
+</div>
+<div class="form-group">
+<label for="stress">مستوى التوتر والقلق</label>
+<select id="stress" required>
+<option value="">اختاري مستوى توترك</option>
+<option value="low">منخفض - أشعر بالراحة والاسترخاء</option>
+<option value="moderate">متوسط - توتر عادي</option>
+<option value="high">عالي - توتر واضح</option>
+<option value="very_high">مرتفع جداً - قلق شديد</option>
+</select>
+</div>
+<button type="submit" class="calculate-btn">
+🧮 احسبي نسبة النجاح
+</button>
+</form>
+<div class="result" id="successResult">
+<h3>توقعات نسبة النجاح:</h3>
+<div id="successResultContent"></div>
+</div>
+</div>
+<!-- Golden Days Calculator -->
+<div class="calc-card" id="golden-calculator">
+<h2 class="calc-title">حاسبة الأيام الذهبية</h2>
+<p class="calc-description">احسبي أفضل أوقات العلاج المحتملة بناءً على دورتك الشهرية</p>
+<form id="goldenDaysForm">
+<div class="form-group">
+<label for="cycleLength">طول الدورة الشهرية (بالأيام)</label>
+<select id="cycleLength" required>
+<option value="">اختاري طول دورتك</option>
+<option value="21">21 يوم</option>
+<option value="22">22 يوم</option>
+<option value="23">23 يوم</option>
+<option value="24">24 يوم</option>
+<option value="25">25 يوم</option>
+<option value="26">26 يوم</option>
+<option value="27">27 يوم</option>
+<option value="28" selected>28 يوم</option>
+<option value="29">29 يوم</option>
+<option value="30">30 يوم</option>
+<option value="31">31 يوم</option>
+<option value="32">32 يوم</option>
+<option value="33">33 يوم</option>
+<option value="34">34 يوم</option>
+<option value="35">35 يوم</option>
+</select>
+</div>
+<div class="form-group">
+<label for="lastPeriod">أول يوم من آخر دورة شهرية</label>
+<input type="date" id="lastPeriod" required>
+</div>
+<button type="submit" class="calculate-btn">
+⏰ احسبي أفضل الأوقات
+</button>
+</form>
+<div class="result" id="goldenResult">
+<h3>أفضل أوقات العلاج:</h3>
+<div id="goldenResultContent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Articles Section -->
+<section class="articles-section" id="articles">
+<div class="container">
+<h2 class="section-title">مقالات ونصائح طبية</h2>
+<div class="articles-grid">
+<div class="article-card">
+<div class="article-icon">📖</div>
+<h4>دليل رحلة الحقن المجهري الشامل</h4>
+<p>دليل مفصل خطوة بخطوة لرحلة العلاج من البداية للنهاية، مع كل ما تحتاجين معرفته</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #4f46e5; margin-bottom: 10px;">🏥 مراحل الرحلة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 8px;">• <strong>المرحلة الأولى:</strong> التحضيرات والفحوصات الأولية</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة الثانية:</strong> تحفيز المبيضين (10-14 يوم)</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة الثالثة:</strong> جمع البويضات (إجراء يومي)</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة الرابعة:</strong> الإخصاب في المختبر</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة الخامسة:</strong> نقل الأجنة</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة السادسة:</strong> فترة الانتظار (10-14 يوم)</li>
+<li style="margin-bottom: 8px;">• <strong>المرحلة النهائية:</strong> اختبار الحمل</li>
+</ul>
+<p style="color: #6b7280; font-size: 0.9rem; margin-top: 10px; margin-bottom: 0;">
+💡 كل مرحلة لها متطلبات خاصة ونصائح مهمة للنجاح
+</p>
+</div>
+<a href="#" class="read-more">اقرأ الدليل الكامل ←</a>
+</div>
+<div class="article-card">
+<div class="article-icon">🏃‍♀️</div>
+<h4>التحضيرات الشاملة قبل العلاج</h4>
+<p>دليل كامل للتحضيرات الجسدية والنفسية والغذائية قبل بدء رحلة الحقن المجهري</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #10b981; margin-bottom: 10px;">⚕️ الفحوصات المطلوبة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• فحوصات هرمونية شاملة (FSH, LH, E2, AMH)</li>
+<li style="margin-bottom: 6px;">• تحليل السائل المنوي للرجل</li>
+<li style="margin-bottom: 6px;">• أشعة الموجات فوق الصوتية للحوض</li>
+<li style="margin-bottom: 6px;">• تصوير الرحم والملحقات (إن لزم الأمر)</li>
+<li style="margin-bottom: 6px;">• فحوصات الدم الروتينية العامة</li>
+</ul>
+<h5 style="color: #f59e0b; margin: 15px 0 10px;">🥗 نصائح غذائية مهمة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• زيدي استهلاك الفواكه والخضروات الطازجة</li>
+<li style="margin-bottom: 6px;">• اختاري البروتينات قليلة الدهون والمأكولات البحرية</li>
+<li style="margin-bottom: 6px;">• تجنبي المشروبات الكحولية والكافيين المفرط</li>
+<li style="margin-bottom: 6px;">• ابدئي بتناول حمض الفوليك قبل 3 أشهر</li>
+</ul>
+</div>
+<a href="#" class="read-more">اقرأ الدليل التفصيلي ←</a>
+</div>
+<div class="article-card">
+<div class="article-icon">💉</div>
+<h4>مراحل العلاج بالتفصيل</h4>
+<p>شرح مفصل لكل مرحلة من مراحل العلاج مع الأدوية المستخدمة والهدف من كل مرحلة</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #8b5cf6; margin-bottom: 10px;">🔄 مرحلة التحفيز:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• دواء تحفيز المبيضين لمدة 8-12 يوم</li>
+<li style="margin-bottom: 6px;">• متابعة يومية بالموجات فوق الصوتية</li>
+<li style="margin-bottom: 6px;">• دواء تثبيت التبويض (يومياً)</li>
+<li style="margin-bottom: 6px;">• تحفيز نهائي قبل 36 ساعة من جمع البويضات</li>
+</ul>
+<h5 style="color: #3b82f6; margin: 15px 0 10px;">🧪 جمع البويضات:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• إجراء بسيط تحت التخدير (20-30 دقيقة)</li>
+<li style="margin-bottom: 6px;">• استخراج البويضات الناضجة عبر الموجات فوق الصوتية</li>
+<li style="margin-bottom: 6px;">• الراحة لعدة ساعات قبل العودة للبيت</li>
+</ul>
+<h5 style="color: #ef4444; margin: 15px 0 10px;">🧬 الإخصاب ونقل الأجنة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• إخصاب البويضات بالحيوانات المنوية</li>
+<li style="margin-bottom: 6px;">• مراقبة تطور الأجنة لمدة 3-5 أيام</li>
+<li style="margin-bottom: 6px;">• نقل أفضل الأجنة للرحم</li>
+</ul>
+</div>
+<a href="#" class="read-more">اكتشف كل التفاصيل ←</a>
+</div>
+<div class="article-card">
+<div class="article-icon">🌟</div>
+<h4>نصائح ذهبية لزيادة فرص النجاح</h4>
+<p>استراتيجيات مثبتة علمياً وتحسينات نمط الحياة لزيادة فرص نجاح العلاج</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #10b981; margin-bottom: 10px;">🎯 نصائح ذهبية مهمة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• <strong>الرياضة المعتدلة:</strong> امشي 30 دقيقة يومياً</li>
+<li style="margin-bottom: 6px;">• <strong>تجنبي الضغط المفرط:</strong> مارسي تقنيات الاسترخاء</li>
+<li style="margin-bottom: 6px;">• <strong>النوم الجيد:</strong> احرصي على 7-8 ساعات يومياً</li>
+<li style="margin-bottom: 6px;">• <strong>تجنبي التدخين والكحول:</strong> مطلقاً أثناء العلاج</li>
+</ul>
+<h5 style="color: #f59e0b; margin: 15px 0 10px;">🍎 أطعمة مفيدة للخصوبة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• الأفوكادو والمكسرات (دهون صحية)</li>
+<li style="margin-bottom: 6px;">• الأسماك الدهنية (سلمون، سردين)</li>
+<li style="margin-bottom: 6px;">• الخضروات الورقية الخضراء</li>
+<li style="margin-bottom: 6px;">• الفواكه الكاملة والتوت</li>
+</ul>
+<h5 style="color: #8b5cf6; margin: 15px 0 10px;">💊 المكملات المهمة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• حمض الفوليك (400-800 ميكروجرام)</li>
+<li style="margin-bottom: 6px;">• فيتامين د3 (1000-2000 وحدة دولية)</li>
+<li style="margin-bottom: 6px;">• أوميغا 3 (1000-2000 مجم)</li>
+<li style="margin-bottom: 6px;">• فيتامين ب12 (عند الحاجة)</li>
+</ul>
+</div>
+<a href="#" class="read-more">احصلي على كل النصائح ←</a>
+</div>
+<div class="article-card">
+<div class="article-icon">🧘‍♀️</div>
+<h4>التعامل مع الضغط النفسي أثناء العلاج</h4>
+<p>دليل شامل لإدارة التوتر والقلق خلال رحلة العلاج مع تقنيات الاسترخاء</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #ec4899; margin-bottom: 10px;">😰 مصادر الضغط الشائعة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• قلق من النتائج وإمكانية النجاح</li>
+<li style="margin-bottom: 6px;">• ضغط من العائلة والأصدقاء</li>
+<li style="margin-bottom: 6px;">• التكلفة المالية للعلاج</li>
+<li style="margin-bottom: 6px;">• الآثار الجانبية للأدوية</li>
+</ul>
+<h5 style="color: #10b981; margin: 15px 0 10px;">🧘‍♀️ تقنيات الاسترخاء:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• تمارين التنفس العميق (10 دقائق يومياً)</li>
+<li style="margin-bottom: 6px;">• التأمل الذه واليوغا</li>
+<li style="margin-bottom: 6px;">• القراءة أو الموسيقى الهادئة</li>
+<li style="margin-bottom: 6px;">• قضاء وقت مع الشريك أو الأصدقاء المقربين</li>
+</ul>
+<h5 style="color: #3b82f6; margin: 15px 0 10px;">🤝 بناء شبكة دعم:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• الانضمام لمجموعات دعم أونلاين</li>
+<li style="margin-bottom: 6px;">• التحدث مع اختصاصية نفسية</li>
+<li style="margin-bottom: 6px;">• مشاركة المخاوف مع الشريك</li>
+<li style="margin-bottom: 6px;">• طلب المساعدة عند الحاجة</li>
+</ul>
+</div>
+<a href="#" class="read-more">تعلمي تقنيات إدارة الضغط ←</a>
+</div>
+<div class="article-card">
+<div class="article-icon">💑</div>
+<h4>دعم الشريك والدور العاطفي</h4>
+<p>كيفية دعم الزوج والزوجة لبعضهما البعض خلال رحلة العلاج وأهمية التواصل</p>
+<div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 10px; text-align: right; direction: rtl;">
+<h5 style="color: #8b5cf6; margin-bottom: 10px;">👨‍👩‍👧‍👦 دور الزوج:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• تقديم الدعم العاطفي والصبر</li>
+<li style="margin-bottom: 6px;">• المساعدة في التحضيرات والمواعيد</li>
+<li style="margin-bottom: 6px;">• المشاركة في القرارات الطبية</li>
+<li style="margin-bottom: 6px;">• تقديم المساعدة في الأعباء اليومية</li>
+</ul>
+<h5 style="color: #ec4899; margin: 15px 0 10px;">💕 دور الزوجة:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• التواصل المفتوح والصادق</li>
+<li style="margin-bottom: 6px;">• مشاركة المشاعر والهموم</li>
+<li style="margin-bottom: 6px;">• تقدير جهد زوجها ودعمه</li>
+<li style="margin-bottom: 6px;">• المحافظة على العلاقة الحميمة</li>
+</ul>
+<h5 style="color: #f59e0b; margin: 15px 0 10px;">💬 نصائح للتواصل:</h5>
+<ul style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 6px;">• احرصي على التواصل اليومي حتى لو كان بسيطاً</li>
+<li style="margin-bottom: 6px;">• اشركي زوجك في كل مراحل العلاج</li>
+<li style="margin-bottom: 6px;">• لا تخفي عنايشك أو مخاوفك</li>
+<li style="margin-bottom: 6px;">• احتفيا معاً بالانتصارات الصغيرة</li>
+</ul>
+</div>
+<a href="#" class="read-more">تعلمي كيفية بناء الدعم المتبادل ←</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Psychological Support Articles Section -->
+<section class="support-section" id="support">
+<div class="container">
+<h2 class="section-title" style="color: white;">مقالات الدعم النفسي والتأقلم</h2>
+<div class="support-grid">
+<div class="support-card">
+<div class="support-icon">😌</div>
+<h3>إدارة التوتر والقلق</h3>
+<p>تقنيات عملية للتعامل مع التوتر والقلق أثناء رحلة العلاج، وطرق الاسترخاع والتأقلم</p>
+<a href="#" class="read-more" style="color: #60a5fa; margin-top: 1rem;">اقرأ المقال كاملاً ←</a>
+</div>
+<div class="support-card">
+<div class="support-icon">🧘‍♀️</div>
+<h3>تقنيات الاسترخاء والتأمل</h3>
+<p>مجموعة من تمارين الاسترخاء والتأمل التي تساعد في تقليل التوتر وتحسين الحالة المزاجية</p>
+<a href="#" class="read-more" style="color: #60a5fa; margin-top: 1rem;">اقرأ المقال كاملاً ←</a>
+</div>
+<div class="support-card">
+<div class="support-icon">🤝</div>
+<h3>بناء شبكة الدعم</h3>
+<p>كيفية بناء شبكة دعم قوية من الأصدقاء والعائلة، وأهمية التواصل مع أشخاص يمرون بتجربة مماثلة</p>
+<a href="#" class="read-more" style="color: #60a5fa; margin-top: 1rem;">اقرأ المقال كاملاً ←</a>
+</div>
+<div class="support-card">
+<div class="support-icon">💪</div>
+<h3>التعامل مع النتائج الصادمة</h3>
+<p>استراتيجيات للتعامل مع النتائج غير المتوقعة أو المحاولات غير الناجحة، وكيفية الحفاظ على الأمل</p>
+<a href="#" class="read-more" style="color: #60a5fa; margin-top: 1rem;">اقرأ المقال كاملاً ←</a>
+</div>
+</div>
+<!-- Additional Support Information -->
+<div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; margin-top: 3rem; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+<h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">هل تحتاجين دعم مباشر؟</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+<div>
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">📞</div>
+<h4>خط الدعم المباشر</h4>
+<p>متوفر 24/7 للرد على استفساراتك</p>
+</div>
+<div>
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+<h4>محادثة مباشرة</h4>
+<p>تحدثي مع أخصائية نفسية الآن</p>
+</div>
+<div>
+<div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+<h4>مجموعات الدعم</h4>
+<p>انضمي لمجموعات من أشخاص يمرون بتجربة مماثلة</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Consultations Section -->
+<section class="features" id="consultations">
+<div class="container">
+<h2 class="section-title">احجز استشارتك الطبية</h2>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">👨‍⚕️</div>
+<h3>استشارة طبيب الخصوبة</h3>
+<p>جلسة فيديو أو صوتية مع طبيب مختص في الخصوبة لحل استفساراتك الطبية</p>
+<a href="#" class="feature-link">احجز الآن</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🧬</div>
+<h3>استشارة إخصائية</h3>
+<p>استشارة مع إخصائية نساء وتوليد لتقييم حالتك ووضع خطة علاجية مخصصة</p>
+<a href="#" class="feature-link">احجز الآن</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">💪</div>
+<h3>استشارة تغذية</h3>
+<p>خطة غذائية مخصصة لتحسين الخصوبة وتعزيز الصحة العامة</p>
+<a href="#" class="feature-link">احجز الآن</a>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🧠</div>
+<h3>استشارة نفسية</h3>
+<p>جلسات مع أخصائية نفسية لمساعدتك في التعامل مع الضغوط النفسية</p>
+<a href="#" class="feature-link">احجز الآن</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>دليل الأمل</h3>
+<p>دليلك الشامل للعلاج داخل المستقبل. نحن هنا لنكون جزءاً من رحلة الأمل وتحقيق الحلم.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<p><a href="#home">الرئيسية</a></p>
+<p><a href="#calculators">الحاسبات</a></p>
+<p><a href="#articles">المقالات</a></p>
+<p><a href="#support">الدعم النفسي</a></p>
+<p><a href="#consultations">الاستشارات</a></p>
+</div>
+<div class="footer-section">
+<h3>معلومات الاتصال</h3>
+<p>Email: info@almal-ivf-guide.com</p>
+<p>هاتف: 123-456-7890</p>
+<p>متاحون على مدار الساعة لدعمك</p>
+</div>
+<div class="footer-section">
+<h3>تابعينا</h3>
+<p>حسابات التواصل الاجتماعي قريباً</p>
+<p>ابقوا على اطلاع على آخر التحديثات والنصائح</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 دليل الأمل للعلاج. جميع الحقوق محفوظة. | صُنع بـ ❤️ لأجل الأمهات والأسر</p>
+</div>
+</div>
+</footer>
+... [内容已截断: 37699 tokens -> ~32000 tokens 限制] ...
+</div>
+</div>
+<!-- Settings Management -->
+<div id="adminSettings" style="display: none;">
+<h3 style="color: #f59e0b; margin-bottom: 20px;">الإعدادات العامة</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+<div>
+<h4 style="color: #374151; margin-bottom: 15px;">معلومات الموقع</h4>
+<div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+<label style="display: block; margin-bottom: 5px; font-weight: bold;">عنوان الموقع:</label>
+<input type="text" id="siteTitle" value="دليل الأمل للعلاج" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 5px;">
+<label style="display: block; margin-bottom: 5px; font-weight: bold;">وصف الموقع:</label>
+<textarea id="siteDescription" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 5px; height: 60px;">دليلك الشامل للعلاج داخل المستقبل</textarea>
+<button onclick="saveSettings()" style="background: #f59e0b; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">💾 حفظ الإعدادات</button>
+</div>
+</div>
+<div>
+<h4 style="color: #374151; margin-bottom: 15px;">إعدادات الأمان</h4>
+<div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+<label style="display: block; margin-bottom: 5px; font-weight: bold;">كلمة المرور الحالية:</label>
+<input type="password" id="currentPassword" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 5px;" placeholder="كلمة المرور الحالية">
+<label style="display: block; margin-bottom: 5px; font-weight: bold;">كلمة المرور الجديدة:</label>
+<input type="password" id="newPassword" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 5px;" placeholder="كلمة المرور الجديدة">
+<label style="display: block; margin-bottom: 5px; font-weight: bold;">تأكيد كلمة المرور:</label>
+<input type="password" id="confirmPassword" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 5px;" placeholder="تأكيد كلمة المرور">
+<button onclick="changePassword()" style="background: #ef4444; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">🔐 تغيير كلمة المرور</button>
+</div>
+<h4 style="color: #374151; margin: 25px 0 15px;">إدارة قاعدة البيانات</h4>
+<div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+<button onclick="exportData()" style="background: #3b82f6; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-bottom: 10px;">📤 تصدير البيانات</button>
+<button onclick="importData()" style="background: #8b5cf6; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-bottom: 10px;">📥 استيراد البيانات</button>
+<button onclick="resetData()" style="background: #ef4444; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">🔄 إعادة تعيين البيانات</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Help Tooltip -->
+<div id="adminHelpTooltip" style="position: fixed; bottom: 90px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 8px; font-size: 0.9rem; z-index: 999; display: none; max-width: 200px;">
+💡 نصيحة: اضغطي على الترس للدخول إلى لوحة الإدارة
+</div>
+<!-- Floating Admin Button -->
+<button id="adminBtn" onclick="showAdminLogin()" style="position: fixed; bottom: 20px; left: 20px; background: #4f46e5; color: white; padding: 15px; border: none; border-radius: 50%; cursor: pointer; z-index: 1000; font-size: 20px; width: 60px; height: 60px; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);" title="إدارة الموقع" 
+onmouseover="document.getElementById('adminHelpTooltip').style.display='block'" 
+onmouseout="document.getElementById('adminHelpTooltip').style.display='none'">⚙️</button>
+<script>
+// Admin System Data Storage
+let adminData = JSON.parse(localStorage.getItem('adminData')) || {
+password: 'admin123',
+articles: [],
+calculatorSettings: {
+baseRate: 70,
+ageFactors: {
+'under25': 25,
+'25_30': 15,
+'30_35': 0,
+'35_40': -10,
+'over40': -20
+}
+},
+siteSettings: {
+title: 'دليل الأمل للعلاج',
+description: 'دليلك الشامل للعلاج داخل المستقبل'
+}
+};
+// Initialize default articles if empty
+if (adminData.articles.length === 0) {
+adminData.articles = [
+{
+id: 1,
+title: 'دليل رحلة الحقن المجهري الشامل',
+icon: '📖',
+description: 'دليل مفصل خطوة بخطوة لرحلة العلاج من البداية للنهاية',
+content: 'محتوى مفصل عن رحلة الحقن المجهري الشامل...',
+color: '#ec4899'
+}
+];
+localStorage.setItem('adminData', JSON.stringify(adminData));
+}
+// Support Articles Management Functions
+let editingSupportArticleIndex = null;
+function showAddSupportArticleForm() {
+document.getElementById('supportArticleForm').style.display = 'block';
+document.getElementById('adminSupport').style.display = 'none';
+document.getElementById('supportArticleFormTitle').textContent = 'إضافة مقال دعم نفسي';
+document.getElementById('newSupportArticleForm').onsubmit = saveNewSupportArticle;
+document.getElementById('newSupportArticleForm').reset();
+editingSupportArticleIndex = null;
+}
+function cancelSupportArticleForm() {
+document.getElementById('supportArticleForm').style.display = 'none';
+document.getElementById('adminSupport').style.display = 'block';
+loadSupportList();
+}
+function saveNewSupportArticle(e) {
+e.preventDefault();
+if (!adminData.supportArticles) {
+adminData.supportArticles = [];
+}
+const newSupportArticle = {
+id: Date.now(),
+title: document.getElementById('supportArticleTitle').value,
+icon: document.getElementById('supportArticleIcon').value,
+description: document.getElementById('supportArticleDescription').value,
+content: document.getElementById('supportArticleContent').value
+};
+adminData.supportArticles.push(newSupportArticle);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم إضافة مقال الدعم النفسي بنجاح!');
+cancelSupportArticleForm();
+}
+function editSupportArticle(index) {
+if (!adminData.supportArticles || !adminData.supportArticles[index]) return;
+const article = adminData.supportArticles[index];
+document.getElementById('supportArticleForm').style.display = 'block';
+document.getElementById('adminSupport').style.display = 'none';
+document.getElementById('supportArticleFormTitle').textContent = 'تعديل مقال الدعم النفسي';
+document.getElementById('supportArticleTitle').value = article.title;
+document.getElementById('supportArticleIcon').value = article.icon;
+document.getElementById('supportArticleDescription').value = article.description;
+document.getElementById('supportArticleContent').value = article.content;
+document.getElementById('newSupportArticleForm').onsubmit = (e) => saveEditedSupportArticle(e, index);
+editingSupportArticleIndex = index;
+}
+function saveEditedSupportArticle(e, index) {
+e.preventDefault();
+if (!adminData.supportArticles || !adminData.supportArticles[index]) return;
+adminData.supportArticles[index] = {
+id: adminData.supportArticles[index].id,
+title: document.getElementById('supportArticleTitle').value,
+icon: document.getElementById('supportArticleIcon').value,
+description: document.getElementById('supportArticleDescription').value,
+content: document.getElementById('supportArticleContent').value
+};
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم تعديل مقال الدعم النفسي بنجاح!');
+cancelSupportArticleForm();
+}
+function deleteSupportArticle(index) {
+if (!adminData.supportArticles || !adminData.supportArticles[index]) return;
+if (confirm('هل أنت متأكد من حذف هذا المقال؟')) {
+adminData.supportArticles.splice(index, 1);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+loadSupportList();
+alert('تم حذف المقال بنجاح!');
+}
+}
+function loadSupportList() {
+const container = document.getElementById('supportList');
+container.innerHTML = '';
+if (!adminData.supportArticles || adminData.supportArticles.length === 0) {
+container.innerHTML = '<p style="text-align: center; color: #6b7280;">لا توجد مقالات دعم نفسي حتى الآن</p>';
+return;
+}
+adminData.supportArticles.forEach((article, index) => {
+const articleCard = document.createElement('div');
+articleCard.style.background = 'white';
+articleCard.style.border = '2px solid #e5e7eb';
+articleCard.style.borderRadius = '10px';
+articleCard.style.padding = '20px';
+articleCard.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+articleCard.innerHTML = `
+<div style="font-size: 2rem; margin-bottom: 10px;">${article.icon}</div>
+<h4 style="color: #1f2937; margin-bottom: 10px;">${article.title}</h4>
+<p style="color: #6b7280; margin-bottom: 15px; font-size: 0.9rem;">${article.description}</p>
+<div style="display: flex; gap: 10px;">
+<button onclick="editSupportArticle(${index})" style="background: #3b82f6; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">✏️ تعديل</button>
+<button onclick="deleteSupportArticle(${index})" style="background: #ef4444; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">🗑️ حذف</button>
+</div>
+`;
+container.appendChild(articleCard);
+});
+}
+// Initialize default support articles if empty
+if (!adminData.supportArticles || adminData.supportArticles.length === 0) {
+adminData.supportArticles = [
+{
+id: 1,
+title: 'إدارة التوتر والقلق',
+icon: '😌',
+description: 'تقنيات عملية للتعامل مع التوتر والقلق أثناء رحلة العلاج',
+content: 'محتوى مفصل عن إدارة التوتر والقلق...'
+},
+{
+id: 2,
+title: 'تقنيات الاسترخاء والتأمل',
+icon: '🧘‍♀️',
+description: 'مجموعة من تمارين الاسترخاء والتأمل التي تساعد في تقليل التوتر',
+content: 'محتوى مفصل عن تقنيات الاسترخاء والتأمل...'
+}
+];
+localStorage.setItem('adminData', JSON.stringify(adminData));
+}
+// Admin Login Functions
+function showAdminLogin() {
+document.getElementById('adminModal').style.display = 'block';
+}
+function closeAdminModal() {
+document.getElementById('adminModal').style.display = 'none';
+}
+function adminLogin() {
+const password = document.getElementById('adminPassword').value;
+if (password === adminData.password) {
+document.getElementById('adminModal').style.display = 'none';
+showAdminPanel();
+} else {
+alert('كلمة المرور غير صحيحة');
+}
+}
+function closeAdminPanel() {
+document.getElementById('adminPanel').style.display = 'none';
+}
+function showAdminPanel() {
+document.getElementById('adminPanel').style.display = 'block';
+showAdminSection('articles');
+loadArticlesList();
+// Initialize calculator settings form
+document.getElementById('baseRate').value = adminData.calculatorSettings.baseRate;
+document.getElementById('ageUnder25').value = adminData.calculatorSettings.ageFactors.under25;
+document.getElementById('age2530').value = adminData.calculatorSettings.ageFactors['25_30'];
+document.getElementById('age3035').value = adminData.calculatorSettings.ageFactors['30_35'];
+document.getElementById('age3540').value = adminData.calculatorSettings.ageFactors['35_40'];
+// Initialize site settings form
+document.getElementById('siteTitle').value = adminData.siteSettings.title;
+document.getElementById('siteDescription').value = adminData.siteSettings.description;
+}
+function showAdminSection(section) {
+// Hide all sections
+document.getElementById('adminArticles').style.display = 'none';
+document.getElementById('adminSupport').style.display = 'none';
+document.getElementById('adminCalculator').style.display = 'none';
+document.getElementById('adminSettings').style.display = 'none';
+document.getElementById('adminStats').style.display = 'none';
+document.getElementById('adminDesign').style.display = 'none';
+document.getElementById('articleForm').style.display = 'none';
+document.getElementById('supportArticleForm').style.display = 'none';
+// Reset button styles
+document.querySelectorAll('#adminPanel button').forEach(btn => {
+if (btn.style.backgroundColor === 'rgb(79, 70, 229)' || 
+btn.style.backgroundColor === 'rgb(16, 185, 129)' || 
+btn.style.backgroundColor === 'rgb(245, 158, 11)') {
+btn.style.backgroundColor = '';
+btn.style.color = 'white';
+}
+});
+// Show selected section
+if (section === 'support') {
+document.getElementById('adminSupport').style.display = 'block';
+loadSupportList();
+} else if (section === 'stats') {
+document.getElementById('adminStats').style.display = 'block';
+updateStatistics();
+} else if (section === 'design') {
+document.getElementById('adminDesign').style.display = 'block';
+initializeDesignSettings();
+} else {
+const sectionId = 'admin' + section.charAt(0).toUpperCase() + section.slice(1);
+document.getElementById(sectionId).style.display = 'block';
+if (section === 'articles') {
+loadArticlesList();
+}
+}
+// Highlight active button
+let sectionId;
+if (section === 'support') {
+sectionId = 'adminSupport';
+} else if (section === 'stats') {
+sectionId = 'adminStats';
+} else if (section === 'design') {
+sectionId = 'adminDesign';
+} else {
+sectionId = 'admin' + section.charAt(0).toUpperCase() + section.slice(1);
+}
+const activeBtn = document.getElementById(sectionId + 'Btn');
+if (activeBtn) {
+activeBtn.style.backgroundColor = 'white';
+activeBtn.style.color = activeBtn.style.backgroundColor;
+}
+}
+// Articles Management Functions
+function loadArticlesList() {
+const container = document.getElementById('articlesList');
+container.innerHTML = '';
+adminData.articles.forEach((article, index) => {
+const articleCard = document.createElement('div');
+articleCard.style.background = 'white';
+articleCard.style.border = '2px solid #e5e7eb';
+articleCard.style.borderRadius = '10px';
+articleCard.style.padding = '20px';
+articleCard.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+articleCard.innerHTML = `
+<div style="font-size: 2rem; margin-bottom: 10px;">${article.icon}</div>
+<h4 style="color: #1f2937; margin-bottom: 10px;">${article.title}</h4>
+<p style="color: #6b7280; margin-bottom: 15px; font-size: 0.9rem;">${article.description}</p>
+<div style="display: flex; gap: 10px;">
+<button onclick="editArticle(${index})" style="background: #3b82f6; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">✏️ تعديل</button>
+<button onclick="deleteArticle(${index})" style="background: #ef4444; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">🗑️ حذف</button>
+</div>
+`;
+container.appendChild(articleCard);
+});
+}
+function showAddArticleForm() {
+document.getElementById('articleForm').style.display = 'block';
+document.getElementById('adminArticles').style.display = 'none';
+document.getElementById('articleFormTitle').textContent = 'إضافة مقال جديد';
+document.getElementById('newArticleForm').onsubmit = saveNewArticle;
+document.getElementById('newArticleForm').reset();
+}
+function editArticle(index) {
+const article = adminData.articles[index];
+document.getElementById('articleForm').style.display = 'block';
+document.getElementById('adminArticles').style.display = 'none';
+document.getElementById('articleFormTitle').textContent = 'تعديل المقال';
+document.getElementById('articleTitle').value = article.title;
+document.getElementById('articleIcon').value = article.icon;
+document.getElementById('articleDescription').value = article.description;
+document.getElementById('articleContent').value = article.content;
+document.getElementById('articleColor').value = article.color;
+document.getElementById('newArticleForm').onsubmit = (e) => saveEditedArticle(e, index);
+}
+function cancelArticleForm() {
+document.getElementById('articleForm').style.display = 'none';
+document.getElementById('adminArticles').style.display = 'block';
+loadArticlesList();
+}
+function saveNewArticle(e) {
+e.preventDefault();
+const newArticle = {
+id: Date.now(),
+title: document.getElementById('articleTitle').value,
+icon: document.getElementById('articleIcon').value,
+description: document.getElementById('articleDescription').value,
+content: document.getElementById('articleContent').value,
+color: document.getElementById('articleColor').value
+};
+adminData.articles.push(newArticle);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم إضافة المقال بنجاح!');
+cancelArticleForm();
+}
+function saveEditedArticle(e, index) {
+e.preventDefault();
+adminData.articles[index] = {
+id: adminData.articles[index].id,
+title: document.getElementById('articleTitle').value,
+icon: document.getElementById('articleIcon').value,
+description: document.getElementById('articleDescription').value,
+content: document.getElementById('articleContent').value,
+color: document.getElementById('articleColor').value
+};
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم تعديل المقال بنجاح!');
+cancelArticleForm();
+}
+function deleteArticle(index) {
+if (confirm('هل أنت متأكد من حذف هذا المقال؟')) {
+adminData.articles.splice(index, 1);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+loadArticlesList();
+alert('تم حذف المقال بنجاح!');
+}
+}
+// Calculator Management Functions
+function saveCalculatorSettings() {
+adminData.calculatorSettings.baseRate = parseInt(document.getElementById('baseRate').value);
+adminData.calculatorSettings.ageFactors['under25'] = parseInt(document.getElementById('ageUnder25').value);
+adminData.calculatorSettings.ageFactors['25_30'] = parseInt(document.getElementById('age2530').value);
+adminData.calculatorSettings.ageFactors['30_35'] = parseInt(document.getElementById('age3035').value);
+adminData.calculatorSettings.ageFactors['35_40'] = parseInt(document.getElementById('age3540').value);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم حفظ إعدادات الحاسبة بنجاح!');
+}
+function testCalculator() {
+location.reload();
+}
+// Settings Management Functions
+function saveSettings() {
+adminData.siteSettings.title = document.getElementById('siteTitle').value;
+adminData.siteSettings.description = document.getElementById('siteDescription').value;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم حفظ الإعدادات بنجاح!');
+}
+function exportData() {
+const dataStr = JSON.stringify(adminData, null, 2);
+const dataBlob = new Blob([dataStr], {type: 'application/json'});
+const url = URL.createObjectURL(dataBlob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'site-data.json';
+link.click();
+URL.revokeObjectURL(url);
+}
+function importData() {
+const input = document.createElement('input');
+input.type = 'file';
+input.accept = '.json';
+input.onchange = (e) => {
+const file = e.target.files[0];
+const reader = new FileReader();
+reader.onload = (e) => {
+try {
+const data = JSON.parse(e.target.result);
+adminData = data;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم استيراد البيانات بنجاح!');
+location.reload();
+} catch (error) {
+alert('خطأ في قراءة الملف!');
+}
+};
+reader.readAsText(file);
+};
+input.click();
+}
+function resetData() {
+if (confirm('هل أنت متأكد من إعادة تعيين جميع البيانات؟ هذا الإجراء لا يمكن التراجع عنه.')) {
+localStorage.removeItem('adminData');
+location.reload();
+}
+}
+function changePassword() {
+const currentPassword = document.getElementById('currentPassword').value;
+const newPassword = document.getElementById('newPassword').value;
+const confirmPassword = document.getElementById('confirmPassword').value;
+if (!currentPassword || !newPassword || !confirmPassword) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+if (currentPassword !== adminData.password) {
+alert('كلمة المرور الحالية غير صحيحة');
+return;
+}
+if (newPassword !== confirmPassword) {
+alert('كلمة المرور الجديدة وتأكيدها غير متطابقين');
+return;
+}
+if (newPassword.length < 6) {
+alert('يجب أن تكون كلمة المرور 6 أحرف على الأقل');
+return;
+}
+adminData.password = newPassword;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+// Clear form
+document.getElementById('currentPassword').value = '';
+document.getElementById('newPassword').value = '';
+document.getElementById('confirmPassword').value = '';
+alert('تم تغيير كلمة المرور بنجاح!');
+}
+// Real-time Content Updates
+function updateSiteContent() {
+// Update site title
+document.title = adminData.siteSettings.title;
+// Update other dynamic content based on adminData
+console.log('Site content updated with admin data:', adminData);
+}
+// Statistics Update Function
+function updateStatistics() {
+document.getElementById('totalArticles').textContent = adminData.articles ? adminData.articles.length : 0;
+document.getElementById('totalSupportArticles').textContent = adminData.supportArticles ? adminData.supportArticles.length : 0;
+// Update calculator usage if analytics exist
+if (adminData.analytics) {
+document.getElementById('calculatorUsage').textContent = adminData.analytics.calculatorUsage || 0;
+document.getElementById('siteVisitors').textContent = adminData.analytics.totalVisitors || 0;
+} else {
+document.getElementById('calculatorUsage').textContent = '0';
+document.getElementById('siteVisitors').textContent = '0';
+}
+// Update last update time
+const now = new Date();
+document.getElementById('lastUpdate').textContent = now.toLocaleString('ar-EG');
+}
+// Design Management Functions
+let designSettings = JSON.parse(localStorage.getItem('designSettings')) || {
+primaryColor: '#4f46e5',
+backgroundColor: '#667eea',
+successColor: '#10b981',
+warningColor: '#f59e0b',
+baseFontSize: '16px',
+fontFamily: "'Tajawal', Arial, sans-serif"
+};
+function saveDesignSettings() {
+designSettings = {
+primaryColor: document.getElementById('primaryColor').value,
+backgroundColor: document.getElementById('backgroundColor').value,
+successColor: document.getElementById('successColor').value,
+warningColor: document.getElementById('warningColor').value,
+baseFontSize: document.getElementById('baseFontSize').value,
+fontFamily: document.getElementById('fontFamily').value
+};
+localStorage.setItem('designSettings', JSON.stringify(designSettings));
+updateColorPreview();
+alert('تم حفظ إعدادات التصميم بنجاح!');
+}
+function updateColorPreview() {
+const primaryColor = document.getElementById('primaryColor').value;
+const backgroundColor = document.getElementById('backgroundColor').value;
+const successColor = document.getElementById('successColor').value;
+const warningColor = document.getElementById('warningColor').value;
+const preview = document.getElementById('colorPreview');
+preview.children[0].style.backgroundColor = primaryColor;
+preview.children[1].style.background = `linear-gradient(135deg, ${backgroundColor}, #764ba2)`;
+preview.children[2].style.backgroundColor = successColor;
+preview.children[3].style.backgroundColor = warningColor;
+}
+function applyDesignChanges() {
+// Apply design changes to the current page
+document.documentElement.style.setProperty('--primary-color', designSettings.primaryColor);
+document.documentElement.style.setProperty('--background-color', designSettings.backgroundColor);
+document.documentElement.style.setProperty('--success-color', designSettings.successColor);
+document.documentElement.style.setProperty('--warning-color', designSettings.warningColor);
+document.documentElement.style.setProperty('--base-font-size', designSettings.baseFontSize);
+document.documentElement.style.setProperty('--font-family', designSettings.fontFamily);
+// Update page body
+document.body.style.fontSize = designSettings.baseFontSize;
+document.body.style.fontFamily = designSettings.fontFamily;
+alert('تم تطبيق تغييرات التصميم بنجاح!');
+}
+// Initialize design settings
+function initializeDesignSettings() {
+document.getElementById('primaryColor').value = designSettings.primaryColor;
+document.getElementById('backgroundColor').value = designSettings.backgroundColor;
+document.getElementById('successColor').value = designSettings.successColor;
+document.getElementById('warningColor').value = designSettings.warningColor;
+document.getElementById('baseFontSize').value = designSettings.baseFontSize;
+document.getElementById('fontFamily').value = designSettings.fontFamily;
+updateColorPreview();
+}
+// Usage Tracking
+function trackUserAction(action, details = '') {
+if (!adminData.analytics) {
+adminData.analytics = {
+calculatorUsage: 0,
+supportArticleViews: {},
+totalVisitors: 0,
+actions: []
+};
+}
+if (action === 'calculator_used') {
+adminData.analytics.calculatorUsage++;
+} else if (action === 'site_visit') {
+adminData.analytics.totalVisitors++;
+} else if (action.startsWith('article_view_')) {
+const articleId = action.replace('article_view_', '');
+adminData.analytics.supportArticleViews[articleId] = (adminData.analytics.supportArticleViews[articleId] || 0) + 1;
+}
+adminData.analytics.actions.push({
+action: action,
+details: details,
+timestamp: new Date().toISOString(),
+url: window.location.href
+});
+localStorage.setItem('adminData', JSON.stringify(adminData));
+// Update statistics display if admin panel is open
+if (document.getElementById('adminPanel').style.display === 'block') {
+updateStatistics();
+}
+}
+// Track page load
+trackUserAction('site_visit');
+// Track calculator usage
+document.getElementById('successRateForm').addEventListener('submit', function() {
+trackUserAction('calculator_used');
+});
+// Initialize design settings when admin panel opens
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+initializeDesignSettings();
+showWelcomeMessage();
+});
+} else {
+initializeDesignSettings();
+showWelcomeMessage();
+}
+function showWelcomeMessage() {
+// Show welcome message for first-time admin users
+const hasSeenWelcome = localStorage.getItem('hasSeenAdminWelcome');
+if (!hasSeenWelcome) {
+setTimeout(() => {
+if (confirm('🌟 مرحباً بك في دليل الأمل للعلاج!\n\nهل تريد عرض دليل سريع حول كيفية استخدام لوحة الإدارة؟')) {
+showAdminTutorial();
+}
+localStorage.setItem('hasSeenAdminWelcome', 'true');
+}, 2000);
+}
+}
+function showAdminTutorial() {
+alert(`📋 دليل استخدام لوحة الإدارة:
+🔐 تسجيل الدخول:
+• اضغطي على زر الترس في الأسفل
+• أدخلي كلمة المرور (الافتراضي: admin123)
+📚 إدارة المحتوى:
+• إضافة مقالات جديدة بسهولة
+• تعديل أو حذف المقالات الموجودة
+• إدارة مقالات الدعم النفسي
+🧮 إعدادات الحاسبة:
+• تعديل عوامل نسبة النجاح
+• تخصيص النصائح والأوصاف
+• اختبار التغييرات
+🎨 تخصيص التصميم:
+• تغيير ألوان الموقع
+• تخصيص الخطوط والأحجام
+• معاينة التغييرات قبل التطبيق
+📊 الإحصائيات:
+• مراقبة أداء الموقع
+• إحصائيات الزوار والاستخدام
+• تحليل البيانات المجمعة
+⚙️ الإعدادات:
+• تغيير كلمة المرور
+• نسخ احتياطي للبيانات
+• استعادة البيانات`);
+alert(`💡 نصائح مهمة:
+• احفظي كلمة المرور الجديدة في مكان آمن
+• اعملي نسخة احتياطية بانتظام من البيانات
+• اختبر أي تغييرات قبل تطبيقها على الموقع
+• استخدمي اللغة العربية في جميع المحتويات`);
+}
+// Success Rate Calculator with Admin Settings
+document.getElementById('successRateForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const age = document.getElementById('age').value;
+const attempts = document.getElementById('attempts').value;
+const cause = document.getElementById('cause').value;
+if (!age || !attempts || !cause) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+// Get new factors
+const bmi = document.getElementById('bmi').value;
+const smoking = document.getElementById('smoking').value;
+const eggQuality = document.getElementById('eggQuality').value;
+const miscarriages = document.getElementById('miscarriages').value;
+const lifestyle = document.getElementById('lifestyle').value;
+const stress = document.getElementById('stress').value;
+if (!age || !attempts || !cause || !bmi || !smoking || !miscarriages || !lifestyle || !stress) {
+alert('يرجى ملء جميع الحقول الأساسية');
+return;
+}
+// Calculate success rate based on factors
+let baseRate = 70; // Base success rate
+// Age adjustment (most important factor)
+const ageFactors = {
+'under25': 25,
+'25_30': 15,
+'30_35': 0,
+'35_40': -10,
+'over40': -20
+};
+// Attempts adjustment
+const attemptFactors = {
+'0': 0,
+'1': -5,
+'2': -10,
+'3': -15
+};
+// Cause adjustment
+const causeFactors = {
+'male': 5,
+'female': -5,
+'both': -10,
+'unknown': 0
+};
+// BMI adjustment
+const bmiFactors = {
+'underweight': -5,
+'normal': 5,
+'overweight': -3,
+'obese': -8
+};
+// Smoking adjustment
+const smokingFactors = {
+'never': 5,
+'former': 0,
+'current': -15
+};
+// Egg quality adjustment (if known)
+const eggQualityFactors = {
+'unknown': 0,
+'excellent': 10,
+'good': 5,
+'fair': -3,
+'poor': -8
+};
+// Miscarriage history adjustment
+const miscarriageFactors = {
+'none': 5,
+'one': -3,
+'two': -8,
+'three': -15
+};
+// Lifestyle adjustment
+const lifestyleFactors = {
+'excellent': 8,
+'good': 3,
+'moderate': 0,
+'poor': -5
+};
+// Stress level adjustment
+const stressFactors = {
+'low': 3,
+'moderate': 0,
+'high': -3,
+'very_high': -8
+};
+// Calculate total success rate
+let successRate = baseRate 
++ ageFactors[age] 
++ attemptFactors[attempts] 
++ causeFactors[cause]
++ bmiFactors[bmi]
++ smokingFactors[smoking]
++ eggQualityFactors[eggQuality]
++ miscarriageFactors[miscarriages]
++ lifestyleFactors[lifestyle]
++ stressFactors[stress];
+successRate = Math.max(20, Math.min(95, successRate)); // Clamp between 20-95%
+// Determine advice based on success rate and specific factors
+let advice = '';
+let priorityTips = [];
+if (successRate >= 80) {
+advice = '🌟 فرصك ممتازة! حالتك قابلة لتحقيق الحلم';
+priorityTips = ['حافظي على نمط حياتك الصحي الحالي', 'استخدمي هذه الفرصة للعلاج في الوقت المناسب'];
+} else if (successRate >= 60) {
+advice = '👍 فرصك جيدة! هناك مجال للتحسين';
+priorityTips = ['ركزي على العوامل التي يمكن تحسينها', 'استشيري طبيبك لوضع خطة مفصلة'];
+} else if (successRate >= 40) {
+advice = '⚠️ تحتاجين لخطة علاجية شاملة';
+priorityTips = ['ابدئي بتحسين العوامل التي تؤثر على الخصوبة', 'فكري في الخيارات البديلة مع طبيبك'];
+} else {
+advice = '💪 لا تيأسي! فرص العلاج متعددة';
+priorityTips = ['ركزي على تحسين صحتك العامة أولاً', 'استشيري مختصين متعددين للخيارات المختلفة'];
+}
+// Add specific advice based on weak factors
+if (smoking === 'current') {
+priorityTips.push('🚭 أهم خطوة: الإقلاع عن التدخين فوراً');
+}
+if (stress === 'very_high') {
+priorityTips.push('🧘‍♀️ سارسي تقنيات إدارة التوتر يومياً');
+}
+if (lifestyle === 'poor') {
+priorityTips.push('🏃‍♀️ ابدئي بنشاط بدني خفيف تدريجياً');
+}
+if (bmi === 'obese' || bmi === 'underweight') {
+priorityTips.push('⚖️ استشيري اختصاصي تغذية لتحقيق الوزن المثالي');
+}
+// Display results
+const resultDiv = document.getElementById('successResult');
+const resultContent = document.getElementById('successResultContent');
+resultContent.innerHTML = `
+<div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
+<h4 style="margin-bottom: 15px; font-size: 1.3rem;">🎯 نسبة النجاح المتوقعة:</h4>
+<p style="font-size: 2rem; font-weight: bold; margin-bottom: 10px;">${successRate}%</p>
+<p style="margin-bottom: 15px;">${advice}</p>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">💡 أولوياتك لتحسين فرصك:</h5>
+<ul style="list-style: none; padding: 0;">
+${priorityTips.map(tip => `<li style="margin-bottom: 5px;">✓ ${tip}</li>`).join('')}
+</ul>
+</div>
+<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">🔍 تحليل العوامل المؤثرة في حالتك:</h5>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem;">
+<div>• العمر: ${ageFactors[age] > 0 ? 'عامل إيجابي' : ageFactors[age] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${ageFactors[age]}%)</div>
+<div>• مؤشر كتلة الجسم: ${bmiFactors[bmi] > 0 ? 'عامل إيجابي' : 'عامل سلبي'} (${bmiFactors[bmi]}%)</div>
+<div>• التدخين: ${smokingFactors[smoking] > 0 ? 'عامل إيجابي' : 'عامل سلبي'} (${smokingFactors[smoking]}%)</div>
+<div>• نمط الحياة: ${lifestyleFactors[lifestyle] > 0 ? 'عامل إيجابي' : lifestyleFactors[lifestyle] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${lifestyleFactors[lifestyle]}%)</div>
+<div>• المحاولات: ${attemptFactors[attempts] > 0 ? 'عامل إيجابي' : attemptFactors[attempts] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${attemptFactors[attempts]}%)</div>
+<div>• السبب: ${causeFactors[cause] > 0 ? 'عامل إيجابي' : causeFactors[cause] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${causeFactors[cause]}%)</div>
+</div>
+<div style="margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.85rem;">
+<strong>📝 تفاصيل الحساب:</strong><br>
+المعدل الأساسي (70%) + مجموع العوامل = ${successRate}%
+</div>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<p style="font-size: 0.95rem; margin: 0;">⚠️ هذه النسب تقديرية مبنية على عوامل علمية، وليست بديلاً عن الاستشارة الطبية المتخصصة. النتائج الفعلية تعتمد على حالتك الصحية الفردية وتقييم طبيبك المختص.</p>
+</div>
+</div>
+`;
+resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Golden Days Calculator
+document.getElementById('goldenDaysForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const cycleLength = parseInt(document.getElementById('cycleLength').value);
+const lastPeriod = new Date(document.getElementById('lastPeriod').value);
+if (!cycleLength || !lastPeriod) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+// Calculate ovulation day (14 days before next period)
+const nextPeriod = new Date(lastPeriod);
+nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
+const ovulationDay = new Date(nextPeriod);
+ovulationDay.setDate(ovulationDay.getDate() - 14);
+// Calculate fertile window (5 days before ovulation to ovulation day)
+const fertileStart = new Date(ovulationDay);
+fertileStart.setDate(fertileStart.getDate() - 4);
+const fertileEnd = new Date(ovulationDay);
+fertileEnd.setDate(fertileEnd.getDate() + 1);
+// Calculate golden days (2-3 days before ovulation)
+const goldenStart = new Date(ovulationDay);
+goldenStart.setDate(goldenStart.getDate() - 2);
+const goldenEnd = new Date(ovulationDay);
+// Format dates
+const formatDate = (date) => {
+return date.toLocaleDateString('ar-EG', {
+weekday: 'long',
+year: 'numeric',
+month: 'long',
+day: 'numeric'
+});
+};
+// Display results
+const resultDiv = document.getElementById('goldenResult');
+const resultContent = document.getElementById('goldenResultContent');
+resultContent.innerHTML = `
+<div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
+<h4 style="margin-bottom: 15px; font-size: 1.3rem;">⏰ الأيام الذهبية (أفضل أوقات العلاج):</h4>
+<p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>من:</strong> ${formatDate(goldenStart)}</p>
+<p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>إلى:</strong> ${formatDate(goldenEnd)}</p>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">🗓️ الفترة الكاملة الخصبة:</h5>
+<p><strong>من:</strong> ${formatDate(fertileStart)}</p>
+<p><strong>إلى:</strong> ${formatDate(fertileEnd)}</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<p style="font-size: 0.95rem; margin: 0;">💡 نصيحة: هذه الحسابات تقديرية، استشيري طبيبك للحصول على توقيت دقيق للعلاج</p>
+</div>
+</div>
+`;
+resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+</body>
+</html>
+loadArticlesList();
+alert('تم حذف المقال بنجاح!');
+}
+}
+// Calculator Management Functions
+function saveCalculatorSettings() {
+adminData.calculatorSettings.baseRate = parseInt(document.getElementById('baseRate').value);
+adminData.calculatorSettings.ageFactors['under25'] = parseInt(document.getElementById('ageUnder25').value);
+adminData.calculatorSettings.ageFactors['25_30'] = parseInt(document.getElementById('age2530').value);
+adminData.calculatorSettings.ageFactors['30_35'] = parseInt(document.getElementById('age3035').value);
+adminData.calculatorSettings.ageFactors['35_40'] = parseInt(document.getElementById('age3540').value);
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم حفظ إعدادات الحاسبة بنجاح!');
+}
+function testCalculator() {
+location.reload();
+}
+// Settings Management Functions
+function saveSettings() {
+adminData.siteSettings.title = document.getElementById('siteTitle').value;
+adminData.siteSettings.description = document.getElementById('siteDescription').value;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم حفظ الإعدادات بنجاح!');
+}
+function exportData() {
+const dataStr = JSON.stringify(adminData, null, 2);
+const dataBlob = new Blob([dataStr], {type: 'application/json'});
+const url = URL.createObjectURL(dataBlob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'site-data.json';
+link.click();
+URL.revokeObjectURL(url);
+}
+function importData() {
+const input = document.createElement('input');
+input.type = 'file';
+input.accept = '.json';
+input.onchange = (e) => {
+const file = e.target.files[0];
+const reader = new FileReader();
+reader.onload = (e) => {
+try {
+const data = JSON.parse(e.target.result);
+adminData = data;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+alert('تم استيراد البيانات بنجاح!');
+location.reload();
+} catch (error) {
+alert('خطأ في قراءة الملف!');
+}
+};
+reader.readAsText(file);
+};
+input.click();
+}
+function resetData() {
+if (confirm('هل أنت متأكد من إعادة تعيين جميع البيانات؟ هذا الإجراء لا يمكن التراجع عنه.')) {
+localStorage.removeItem('adminData');
+location.reload();
+}
+}
+function changePassword() {
+const currentPassword = document.getElementById('currentPassword').value;
+const newPassword = document.getElementById('newPassword').value;
+const confirmPassword = document.getElementById('confirmPassword').value;
+if (!currentPassword || !newPassword || !confirmPassword) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+if (currentPassword !== adminData.password) {
+alert('كلمة المرور الحالية غير صحيحة');
+return;
+}
+if (newPassword !== confirmPassword) {
+alert('كلمة المرور الجديدة وتأكيدها غير متطابقين');
+return;
+}
+if (newPassword.length < 6) {
+alert('يجب أن تكون كلمة المرور 6 أحرف على الأقل');
+return;
+}
+adminData.password = newPassword;
+localStorage.setItem('adminData', JSON.stringify(adminData));
+// Clear form
+document.getElementById('currentPassword').value = '';
+document.getElementById('newPassword').value = '';
+document.getElementById('confirmPassword').value = '';
+alert('تم تغيير كلمة المرور بنجاح!');
+}
+// Real-time Content Updates
+function updateSiteContent() {
+// Update site title
+document.title = adminData.siteSettings.title;
+// Update other dynamic content based on adminData
+console.log('Site content updated with admin data:', adminData);
+}
+// Statistics Update Function
+function updateStatistics() {
+document.getElementById('totalArticles').textContent = adminData.articles ? adminData.articles.length : 0;
+document.getElementById('totalSupportArticles').textContent = adminData.supportArticles ? adminData.supportArticles.length : 0;
+// Update calculator usage if analytics exist
+if (adminData.analytics) {
+document.getElementById('calculatorUsage').textContent = adminData.analytics.calculatorUsage || 0;
+document.getElementById('siteVisitors').textContent = adminData.analytics.totalVisitors || 0;
+} else {
+document.getElementById('calculatorUsage').textContent = '0';
+document.getElementById('siteVisitors').textContent = '0';
+}
+// Update last update time
+const now = new Date();
+document.getElementById('lastUpdate').textContent = now.toLocaleString('ar-EG');
+}
+// Design Management Functions
+let designSettings = JSON.parse(localStorage.getItem('designSettings')) || {
+primaryColor: '#4f46e5',
+backgroundColor: '#667eea',
+successColor: '#10b981',
+warningColor: '#f59e0b',
+baseFontSize: '16px',
+fontFamily: "'Tajawal', Arial, sans-serif"
+};
+function saveDesignSettings() {
+designSettings = {
+primaryColor: document.getElementById('primaryColor').value,
+backgroundColor: document.getElementById('backgroundColor').value,
+successColor: document.getElementById('successColor').value,
+warningColor: document.getElementById('warningColor').value,
+baseFontSize: document.getElementById('baseFontSize').value,
+fontFamily: document.getElementById('fontFamily').value
+};
+localStorage.setItem('designSettings', JSON.stringify(designSettings));
+updateColorPreview();
+alert('تم حفظ إعدادات التصميم بنجاح!');
+}
+function updateColorPreview() {
+const primaryColor = document.getElementById('primaryColor').value;
+const backgroundColor = document.getElementById('backgroundColor').value;
+const successColor = document.getElementById('successColor').value;
+const warningColor = document.getElementById('warningColor').value;
+const preview = document.getElementById('colorPreview');
+preview.children[0].style.backgroundColor = primaryColor;
+preview.children[1].style.background = `linear-gradient(135deg, ${backgroundColor}, #764ba2)`;
+preview.children[2].style.backgroundColor = successColor;
+preview.children[3].style.backgroundColor = warningColor;
+}
+function applyDesignChanges() {
+// Apply design changes to the current page
+document.documentElement.style.setProperty('--primary-color', designSettings.primaryColor);
+document.documentElement.style.setProperty('--background-color', designSettings.backgroundColor);
+document.documentElement.style.setProperty('--success-color', designSettings.successColor);
+document.documentElement.style.setProperty('--warning-color', designSettings.warningColor);
+document.documentElement.style.setProperty('--base-font-size', designSettings.baseFontSize);
+document.documentElement.style.setProperty('--font-family', designSettings.fontFamily);
+// Update page body
+document.body.style.fontSize = designSettings.baseFontSize;
+document.body.style.fontFamily = designSettings.fontFamily;
+alert('تم تطبيق تغييرات التصميم بنجاح!');
+}
+// Initialize design settings
+function initializeDesignSettings() {
+document.getElementById('primaryColor').value = designSettings.primaryColor;
+document.getElementById('backgroundColor').value = designSettings.backgroundColor;
+document.getElementById('successColor').value = designSettings.successColor;
+document.getElementById('warningColor').value = designSettings.warningColor;
+document.getElementById('baseFontSize').value = designSettings.baseFontSize;
+document.getElementById('fontFamily').value = designSettings.fontFamily;
+updateColorPreview();
+}
+// Usage Tracking
+function trackUserAction(action, details = '') {
+if (!adminData.analytics) {
+adminData.analytics = {
+calculatorUsage: 0,
+supportArticleViews: {},
+totalVisitors: 0,
+actions: []
+};
+}
+if (action === 'calculator_used') {
+adminData.analytics.calculatorUsage++;
+} else if (action === 'site_visit') {
+adminData.analytics.totalVisitors++;
+} else if (action.startsWith('article_view_')) {
+const articleId = action.replace('article_view_', '');
+adminData.analytics.supportArticleViews[articleId] = (adminData.analytics.supportArticleViews[articleId] || 0) + 1;
+}
+adminData.analytics.actions.push({
+action: action,
+details: details,
+timestamp: new Date().toISOString(),
+url: window.location.href
+});
+localStorage.setItem('adminData', JSON.stringify(adminData));
+// Update statistics display if admin panel is open
+if (document.getElementById('adminPanel').style.display === 'block') {
+updateStatistics();
+}
+}
+// Track page load
+trackUserAction('site_visit');
+// Track calculator usage
+document.getElementById('successRateForm').addEventListener('submit', function() {
+trackUserAction('calculator_used');
+});
+// Initialize design settings when admin panel opens
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+initializeDesignSettings();
+showWelcomeMessage();
+});
+} else {
+initializeDesignSettings();
+showWelcomeMessage();
+}
+function showWelcomeMessage() {
+// Show welcome message for first-time admin users
+const hasSeenWelcome = localStorage.getItem('hasSeenAdminWelcome');
+if (!hasSeenWelcome) {
+setTimeout(() => {
+if (confirm('🌟 مرحباً بك في دليل الأمل للعلاج!\n\nهل تريد عرض دليل سريع حول كيفية استخدام لوحة الإدارة؟')) {
+showAdminTutorial();
+}
+localStorage.setItem('hasSeenAdminWelcome', 'true');
+}, 2000);
+}
+}
+function showAdminTutorial() {
+alert(`📋 دليل استخدام لوحة الإدارة:
+🔐 تسجيل الدخول:
+• اضغطي على زر الترس في الأسفل
+• أدخلي كلمة المرور (الافتراضي: admin123)
+📚 إدارة المحتوى:
+• إضافة مقالات جديدة بسهولة
+• تعديل أو حذف المقالات الموجودة
+• إدارة مقالات الدعم النفسي
+🧮 إعدادات الحاسبة:
+• تعديل عوامل نسبة النجاح
+• تخصيص النصائح والأوصاف
+• اختبار التغييرات
+🎨 تخصيص التصميم:
+• تغيير ألوان الموقع
+• تخصيص الخطوط والأحجام
+• معاينة التغييرات قبل التطبيق
+📊 الإحصائيات:
+• مراقبة أداء الموقع
+• إحصائيات الزوار والاستخدام
+• تحليل البيانات المجمعة
+⚙️ الإعدادات:
+• تغيير كلمة المرور
+• نسخ احتياطي للبيانات
+• استعادة البيانات`);
+alert(`💡 نصائح مهمة:
+• احفظي كلمة المرور الجديدة في مكان آمن
+• اعملي نسخة احتياطية بانتظام من البيانات
+• اختبر أي تغييرات قبل تطبيقها على الموقع
+• استخدمي اللغة العربية في جميع المحتويات`);
+}
+// Success Rate Calculator with Admin Settings
+document.getElementById('successRateForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const age = document.getElementById('age').value;
+const attempts = document.getElementById('attempts').value;
+const cause = document.getElementById('cause').value;
+if (!age || !attempts || !cause) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+// Get new factors
+const bmi = document.getElementById('bmi').value;
+const smoking = document.getElementById('smoking').value;
+const eggQuality = document.getElementById('eggQuality').value;
+const miscarriages = document.getElementById('miscarriages').value;
+const lifestyle = document.getElementById('lifestyle').value;
+const stress = document.getElementById('stress').value;
+if (!age || !attempts || !cause || !bmi || !smoking || !miscarriages || !lifestyle || !stress) {
+alert('يرجى ملء جميع الحقول الأساسية');
+return;
+}
+// Calculate success rate based on factors
+let baseRate = 70; // Base success rate
+// Age adjustment (most important factor)
+const ageFactors = {
+'under25': 25,
+'25_30': 15,
+'30_35': 0,
+'35_40': -10,
+'over40': -20
+};
+// Attempts adjustment
+const attemptFactors = {
+'0': 0,
+'1': -5,
+'2': -10,
+'3': -15
+};
+// Cause adjustment
+const causeFactors = {
+'male': 5,
+'female': -5,
+'both': -10,
+'unknown': 0
+};
+// BMI adjustment
+const bmiFactors = {
+'underweight': -5,
+'normal': 5,
+'overweight': -3,
+'obese': -8
+};
+// Smoking adjustment
+const smokingFactors = {
+'never': 5,
+'former': 0,
+'current': -15
+};
+// Egg quality adjustment (if known)
+const eggQualityFactors = {
+'unknown': 0,
+'excellent': 10,
+'good': 5,
+'fair': -3,
+'poor': -8
+};
+// Miscarriage history adjustment
+const miscarriageFactors = {
+'none': 5,
+'one': -3,
+'two': -8,
+'three': -15
+};
+// Lifestyle adjustment
+const lifestyleFactors = {
+'excellent': 8,
+'good': 3,
+'moderate': 0,
+'poor': -5
+};
+// Stress level adjustment
+const stressFactors = {
+'low': 3,
+'moderate': 0,
+'high': -3,
+'very_high': -8
+};
+// Calculate total success rate
+let successRate = baseRate 
++ ageFactors[age] 
++ attemptFactors[attempts] 
++ causeFactors[cause]
++ bmiFactors[bmi]
++ smokingFactors[smoking]
++ eggQualityFactors[eggQuality]
++ miscarriageFactors[miscarriages]
++ lifestyleFactors[lifestyle]
++ stressFactors[stress];
+successRate = Math.max(20, Math.min(95, successRate)); // Clamp between 20-95%
+// Determine advice based on success rate and specific factors
+let advice = '';
+let priorityTips = [];
+if (successRate >= 80) {
+advice = '🌟 فرصك ممتازة! حالتك قابلة لتحقيق الحلم';
+priorityTips = ['حافظي على نمط حياتك الصحي الحالي', 'استخدمي هذه الفرصة للعلاج في الوقت المناسب'];
+} else if (successRate >= 60) {
+advice = '👍 فرصك جيدة! هناك مجال للتحسين';
+priorityTips = ['ركزي على العوامل التي يمكن تحسينها', 'استشيري طبيبك لوضع خطة مفصلة'];
+} else if (successRate >= 40) {
+advice = '⚠️ تحتاجين لخطة علاجية شاملة';
+priorityTips = ['ابدئي بتحسين العوامل التي تؤثر على الخصوبة', 'فكري في الخيارات البديلة مع طبيبك'];
+} else {
+advice = '💪 لا تيأسي! فرص العلاج متعددة';
+priorityTips = ['ركزي على تحسين صحتك العامة أولاً', 'استشيري مختصين متعددين للخيارات المختلفة'];
+}
+// Add specific advice based on weak factors
+if (smoking === 'current') {
+priorityTips.push('🚭 أهم خطوة: الإقلاع عن التدخين فوراً');
+}
+if (stress === 'very_high') {
+priorityTips.push('🧘‍♀️ سارسي تقنيات إدارة التوتر يومياً');
+}
+if (lifestyle === 'poor') {
+priorityTips.push('🏃‍♀️ ابدئي بنشاط بدني خفيف تدريجياً');
+}
+if (bmi === 'obese' || bmi === 'underweight') {
+priorityTips.push('⚖️ استشيري اختصاصي تغذية لتحقيق الوزن المثالي');
+}
+// Display results
+const resultDiv = document.getElementById('successResult');
+const resultContent = document.getElementById('successResultContent');
+resultContent.innerHTML = `
+<div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
+<h4 style="margin-bottom: 15px; font-size: 1.3rem;">🎯 نسبة النجاح المتوقعة:</h4>
+<p style="font-size: 2rem; font-weight: bold; margin-bottom: 10px;">${successRate}%</p>
+<p style="margin-bottom: 15px;">${advice}</p>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">💡 أولوياتك لتحسين فرصك:</h5>
+<ul style="list-style: none; padding: 0;">
+${priorityTips.map(tip => `<li style="margin-bottom: 5px;">✓ ${tip}</li>`).join('')}
+</ul>
+</div>
+<div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">🔍 تحليل العوامل المؤثرة في حالتك:</h5>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem;">
+<div>• العمر: ${ageFactors[age] > 0 ? 'عامل إيجابي' : ageFactors[age] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${ageFactors[age]}%)</div>
+<div>• مؤشر كتلة الجسم: ${bmiFactors[bmi] > 0 ? 'عامل إيجابي' : 'عامل سلبي'} (${bmiFactors[bmi]}%)</div>
+<div>• التدخين: ${smokingFactors[smoking] > 0 ? 'عامل إيجابي' : 'عامل سلبي'} (${smokingFactors[smoking]}%)</div>
+<div>• نمط الحياة: ${lifestyleFactors[lifestyle] > 0 ? 'عامل إيجابي' : lifestyleFactors[lifestyle] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${lifestyleFactors[lifestyle]}%)</div>
+<div>• المحاولات: ${attemptFactors[attempts] > 0 ? 'عامل إيجابي' : attemptFactors[attempts] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${attemptFactors[attempts]}%)</div>
+<div>• السبب: ${causeFactors[cause] > 0 ? 'عامل إيجابي' : causeFactors[cause] < 0 ? 'عامل سلبي' : 'عامل محايد'} (${causeFactors[cause]}%)</div>
+</div>
+<div style="margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.85rem;">
+<strong>📝 تفاصيل الحساب:</strong><br>
+المعدل الأساسي (70%) + مجموع العوامل = ${successRate}%
+</div>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<p style="font-size: 0.95rem; margin: 0;">⚠️ هذه النسب تقديرية مبنية على عوامل علمية، وليست بديلاً عن الاستشارة الطبية المتخصصة. النتائج الفعلية تعتمد على حالتك الصحية الفردية وتقييم طبيبك المختص.</p>
+</div>
+</div>
+`;
+resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Golden Days Calculator
+document.getElementById('goldenDaysForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const cycleLength = parseInt(document.getElementById('cycleLength').value);
+const lastPeriod = new Date(document.getElementById('lastPeriod').value);
+if (!cycleLength || !lastPeriod) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+// Calculate ovulation day (14 days before next period)
+const nextPeriod = new Date(lastPeriod);
+nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
+const ovulationDay = new Date(nextPeriod);
+ovulationDay.setDate(ovulationDay.getDate() - 14);
+// Calculate fertile window (5 days before ovulation to ovulation day)
+const fertileStart = new Date(ovulationDay);
+fertileStart.setDate(fertileStart.getDate() - 4);
+const fertileEnd = new Date(ovulationDay);
+fertileEnd.setDate(fertileEnd.getDate() + 1);
+// Calculate golden days (2-3 days before ovulation)
+const goldenStart = new Date(ovulationDay);
+goldenStart.setDate(goldenStart.getDate() - 2);
+const goldenEnd = new Date(ovulationDay);
+// Format dates
+const formatDate = (date) => {
+return date.toLocaleDateString('ar-EG', {
+weekday: 'long',
+year: 'numeric',
+month: 'long',
+day: 'numeric'
+});
+};
+// Display results
+const resultDiv = document.getElementById('goldenResult');
+const resultContent = document.getElementById('goldenResultContent');
+resultContent.innerHTML = `
+<div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
+<h4 style="margin-bottom: 15px; font-size: 1.3rem;">⏰ الأيام الذهبية (أفضل أوقات العلاج):</h4>
+<p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>من:</strong> ${formatDate(goldenStart)}</p>
+<p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>إلى:</strong> ${formatDate(goldenEnd)}</p>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">🗓️ الفترة الكاملة الخصبة:</h5>
+<p><strong>من:</strong> ${formatDate(fertileStart)}</p>
+<p><strong>إلى:</strong> ${formatDate(fertileEnd)}</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<p style="font-size: 0.95rem; margin: 0;">💡 نصيحة: هذه الحسابات تقديرية، استشيري طبيبك للحصول على توقيت دقيق للعلاج</p>
+</div>
+</div>
+`;
+resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+</body>
+</html>
+    resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Golden Days Calculator
+document.getElementById('goldenDaysForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const cycleLength = parseInt(document.getElementById('cycleLength').value);
+const lastPeriod = new Date(document.getElementById('lastPeriod').value);
+if (!cycleLength || !lastPeriod) {
+alert('يرجى ملء جميع الحقول');
+return;
+}
+// Calculate ovulation day (14 days before next period)
+const nextPeriod = new Date(lastPeriod);
+nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
+const ovulationDay = new Date(nextPeriod);
+ovulationDay.setDate(ovulationDay.getDate() - 14);
+// Calculate fertile window (5 days before ovulation to ovulation day)
+const fertileStart = new Date(ovulationDay);
+fertileStart.setDate(fertileStart.getDate() - 4);
+const fertileEnd = new Date(ovulationDay);
+fertileEnd.setDate(fertileEnd.getDate() + 1);
+// Calculate golden days (2-3 days before ovulation)
+const goldenStart = new Date(ovulationDay);
+goldenStart.setDate(goldenStart.getDate() - 2);
+const goldenEnd = new Date(ovulationDay);
+// Format dates
+const formatDate = (date) => {
+return date.toLocaleDateString('ar-EG', {
+weekday: 'long',
+year: 'numeric',
+month: 'long',
+day: 'numeric'
+});
+};
+// Display results
+const resultDiv = document.getElementById('goldenResult');
+const resultContent = document.getElementById('goldenResultContent');
+resultContent.innerHTML = `
+<div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 20px; border-radius: 15px; margin-top: 20px;">
+<h4 style="margin-bottom: 15px; font-size: 1.3rem;">⏰ الأيام الذهبية (أفضل أوقات العلاج):</h4>
+<p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>من:</strong> ${formatDate(goldenStart)}</p>
+<p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>إلى:</strong> ${formatDate(goldenEnd)}</p>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<h5 style="margin-bottom: 10px;">🗓️ الفترة الكاملة الخصبة:</h5>
+<p><strong>من:</strong> ${formatDate(fertileStart)}</p>
+<p><strong>إلى:</strong> ${formatDate(fertileEnd)}</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+<p style="font-size: 0.95rem; margin: 0;">💡 نصيحة: هذه الحسابات تقديرية، استشيري طبيبك للحصول على توقيت دقيق للعلاج</p>
+</div>
+</div>
+`;
+resultDiv.style.display = 'block';
+resultDiv.scrollIntoView({ behavior: 'smooth' });
+});
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+</body>
+</html>
+    // Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
 </body>
 </html>
