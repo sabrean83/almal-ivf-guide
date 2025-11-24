@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<url>
-    <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-</url>
-<url>
-    <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/admin-dashboard.html</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-</url>
-<!-- صفحات المقالات -->
-<url>
-    <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#articles</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-</url>
-<url>
-    <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#consultation</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-</url>
-<url>
-    <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#calculator</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/admin-dashboard.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحات المقالات -->
+    <url>
+        <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#articles</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#consultation</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://almal-ivf-guide.github.io/almal-ivf-guide/#calculator</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
